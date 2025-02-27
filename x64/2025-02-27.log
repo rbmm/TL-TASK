@@ -1,0 +1,190 @@
+[12:28:48] NT::CService::CService<000000000126F7B0>
+[12:28:48] NT::DllRegisterServer=0
+[12:28:48] ++ ServiceMain
+[12:28:48] LoadDriver=c0000428
+[12:28:48] -- ServiceMain
+[12:28:48] NT::CService::~CService<000000000126F7B0>
+[12:37:00] NT::CService::CService<00000000012D0330>
+[12:37:00] ++ ServiceMain
+[12:37:00] 9a4> ++LpcServer
+[12:37:00] CONNECTION_REQUEST:930,930
+[12:37:00] 9a8> ++LpcServer
+[12:37:00] 930> open=0, heap at 00007DF4B13F0000
+[12:37:00] 9a8: 508(508)-> 9c8 <\??\C:\Windows\System32\sihost.exe> <sihost.exe>
+[12:37:00] 	508 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:37:00] 9a4: 300(300)-> 9e4 <\??\C:\Windows\system32\svchost.exe> <C:\Windows\system32\svchost.exe -k wsappx -p>
+[12:37:00] 	300 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[12:37:00] 9a8: 300(300)-> 9ec <\??\C:\Windows\system32\svchost.exe> <C:\Windows\system32\svchost.exe -k UnistackSvcGroup>
+[12:37:00] 	300 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[12:37:00] 9a4: 508(508)-> a30 <\??\C:\Windows\System32\taskhostw.exe> <taskhostw.exe {222A245B-E637-4AE9-A93F-A59CA119A75E}>
+[12:37:00] 	508 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:37:00] 9a8: 508(508)-> a3c <\??\C:\Windows\System32\taskhostw.exe> <taskhostw.exe>
+[12:37:00] 	508 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:37:00] 9a4: 508(508)-> a64 <\??\C:\Windows\System32\taskhostw.exe> <taskhostw.exe>
+[12:37:00] 	508 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:37:00] 9a8: 300(300)-> ae0 <\??\C:\Windows\system32\dllhost.exe> <C:\Windows\system32\dllhost.exe /Processid:{69063CAA-A134-479B-83E7-C97AB2187907}>
+[12:37:00] 	300 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[12:37:00] 9a4: 300(300)-> b9c <\??\C:\Windows\system32\dllhost.exe> <C:\Windows\system32\dllhost.exe /Processid:{02D4B3F1-FD88-11D1-960D-00805FC79235}>
+[12:37:00] 	300 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[12:37:01] 9a8: 300(300)-> 6cc <\??\C:\Windows\system32\sppsvc.exe> <C:\Windows\system32\sppsvc.exe>
+[12:37:01] 	300 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[12:37:01] 9a4: 384(384)-> 890 <\??\C:\Windows\system32\wbem\wmiprvse.exe> <C:\Windows\system32\wbem\wmiprvse.exe -secured -Embedding>
+[12:37:01] 	384 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:37:01] 9a8: 2d0(2d0)-> a14 <\??\C:\Windows\system32\userinit.exe> <C:\Windows\system32\userinit.exe>
+[12:37:01] 	2d0 = "\Device\HarddiskVolume3\Windows\System32\winlogon.exe"
+[12:37:01] 9a4: a14(a14)-> afc <\??\C:\Windows\Explorer.EXE> <C:\Windows\Explorer.EXE>
+[12:37:01] 	a14 = "\Device\HarddiskVolume3\Windows\System32\userinit.exe"
+[12:37:01] 9a8: 9c8(9c8)-> 424 <\??\C:\Windows\System32\ShellHost.exe> <"C:\Windows\System32\ShellHost.exe">
+[12:37:01] 	9c8 = "\Device\HarddiskVolume3\Windows\System32\sihost.exe"
+[12:37:01] 9a4: 508(508)-> c5c <\??\C:\Windows\System32\taskhostw.exe> <taskhostw.exe TimeSyncTask>
+[12:37:01] 	508 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:37:01] 9a8: 300(300)-> c70 <\??\C:\Windows\System32\svchost.exe> <C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted>
+[12:37:01] 	300 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[12:37:02] 9a4: 300(300)-> e30 <\??\C:\Windows\System32\msdtc.exe> <C:\Windows\System32\msdtc.exe>
+[12:37:02] 	300 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[12:37:03] 9a8: 384(384)-> e4c <\??\C:\Windows\SystemApps\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\StartMenuExperienceHost.exe> <"C:\Windows\SystemApps\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\StartMenuExperienceHost.exe" -ServerName:App.AppXywbrabmsek0gm3tkwpr5kwzbs55tkqay.mca>
+[12:37:03] 	384 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:37:03] 9a4: 384(384)-> e6c <\??\C:\Windows\system32\DllHost.exe> <C:\Windows\system32\DllHost.exe /Processid:{AB8902B4-09CA-4BB6-B78D-A8F59079A8D5}>
+[12:37:03] 	384 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:37:03] 9a8: 384(384)-> ed4 <\??\C:\Windows\System32\RuntimeBroker.exe> <C:\Windows\System32\RuntimeBroker.exe -Embedding>
+[12:37:03] 	384 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:37:03] 9a4: 300(300)-> f48 <\??\C:\Windows\system32\svchost.exe> <C:\Windows\system32\svchost.exe -k osprivacy -p>
+[12:37:03] 	300 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[12:37:03] 9a8: 508(508)-> f80 <\??\C:\Windows\System32\taskhostw.exe> <taskhostw.exe network>
+[12:37:03] 	508 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:37:04] 9a4: 1f0(1f0)-> f60 <\??\C:\Windows\system32\ctfmon.exe> </QuitInfo:0000000000000650;0000000000000654; >
+[12:37:04] 	1f0 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:37:04] 9a8: 300(300)-> 1058 <\??\C:\Windows\system32\vssvc.exe> <C:\Windows\system32\vssvc.exe>
+[12:37:04] 	300 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[12:37:05] 9a4: 384(384)-> 10ac <\??\C:\Windows\system32\SppExtComObj.exe> <C:\Windows\system32\SppExtComObj.exe -Embedding>
+[12:37:05] 	384 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:37:05] 9a8: 10ac(10ac)-> 10d0 <\??\C:\Windows\System32\SLUI.exe> <"C:\Windows\System32\SLUI.exe" RuleId=502ff3ba-669a-4674-bbb1-601f34a3b968;Action=AutoActivateSilent;AppId=55c92734-d682-4d71-983e-d6ec3f16059f;SkuId=32d2fab3-e4a8-42c2-923b-4bf4fd13e6ee;NotificationInterval=1440;Trigger=UserLogon;SessionId=1>
+[12:37:05] 	10ac = "\Device\HarddiskVolume3\Windows\System32\SppExtComObj.Exe"
+[12:37:05] 9a4: 10ac(10ac)-> 10f0 <\??\C:\Windows\System32\SLUI.exe> <"C:\Windows\System32\SLUI.exe" RuleId=502ff3ba-669a-4674-bbb1-601f34a3b968;Action=AutoActivateSilent;AppId=55c92734-d682-4d71-983e-d6ec3f16059f;SkuId=32d2fab3-e4a8-42c2-923b-4bf4fd13e6ee;NotificationInterval=1440;Trigger=NetworkAvailable>
+[12:37:05] 	10ac = "\Device\HarddiskVolume3\Windows\System32\SppExtComObj.Exe"
+[12:37:05] 9a8: 384(384)-> 1110 <\??\C:\Windows\System32\smartscreen.exe> <C:\Windows\System32\smartscreen.exe -Embedding>
+[12:37:05] 	384 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:37:05] 9a4: afc(afc)-> 1138 <\??\C:\Program Files\VMware\VMware Tools\vmtoolsd.exe> <"C:\Program Files\VMware\VMware Tools\vmtoolsd.exe" -n vmusr>
+[12:37:05] 	afc = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[12:37:08] 9a8: 508(508)-> 1174 <\??\C:\Windows\System32\taskhostw.exe> <taskhostw.exe KEYROAMING>
+[12:37:08] 	508 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:37:08] 9a4: 300(300)-> 1184 <\??\C:\Windows\System32\svchost.exe> <C:\Windows\System32\svchost.exe -k CameraMonitor>
+[12:37:08] 	300 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[12:37:10] 9a8: 300(300)-> 11e4 <\??\C:\Windows\system32\svchost.exe> <C:\Windows\system32\svchost.exe -k LocalServiceAndNoImpersonation>
+[12:37:10] 	300 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[12:37:12] 9a4: 508(508)-> 123c <\??\C:\Windows\System32\consent.exe> <consent.exe 1288 472 00000191BC0D7600>
+[12:37:12] 	508 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:37:12] 9a8: 508(afc)-> 1258 <\??\C:\Program Files (x86)\Far2\Far.exe> <"C:\Program Files (x86)\Far2\Far.exe" >
+[12:37:12] 	508 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:37:12] 	afc = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[12:37:12] 9a4: 1258(1258)-> 1264 <\SystemRoot\System32\Conhost.exe> <\??\C:\Windows\system32\conhost.exe 0xffffffff -ForceV1>
+[12:37:12] 	1258 = "\Device\HarddiskVolume3\Program Files (x86)\Far2\Far.exe"
+[12:37:20] 9a8: 384(384)-> 12dc <\??\C:\Windows\system32\wbem\wmiprvse.exe> <C:\Windows\system32\wbem\wmiprvse.exe -Embedding>
+[12:37:20] 	384 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:37:21] 9a4: 300(300)-> 1320 <\??\C:\Windows\system32\wbem\WmiApSrv.exe> <C:\Windows\system32\wbem\WmiApSrv.exe>
+[12:37:21] 	300 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[12:37:38] 9a8: 2d0(2d0)-> 135c <\??\C:\Windows\system32\wlrmdr.exe> < -c -s 0 -f 0 -t Empty -m Empty -a 0 -u Empty>
+[12:37:38] 	2d0 = "\Device\HarddiskVolume3\Windows\System32\winlogon.exe"
+[12:37:51] 9a4: 384(384)-> 13bc <\??\C:\Windows\System32\BdeUISrv.exe> <C:\Windows\System32\BdeUISrv.exe -Embedding>
+[12:37:51] 	384 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:38:00] 9a8: 508(508)-> 13e4 <\??\C:\Windows\system32\dxgiadaptercache.exe> <"C:\Windows\system32\dxgiadaptercache.exe">
+[12:38:00] 	508 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:38:00] 9a4: afc(afc)-> b30 <\??\C:\Windows\System32\cmd.exe> <"C:\Windows\System32\cmd.exe" >
+[12:38:00] 	afc = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[12:38:00] 9a8: b30(b30)-> a5c <\SystemRoot\System32\Conhost.exe> <\??\C:\Windows\system32\conhost.exe 0xffffffff -ForceV1>
+[12:38:00] 	b30 = "\Device\HarddiskVolume3\Windows\System32\cmd.exe"
+[12:38:03] 9a4: 508(508)-> 1094 <\??\C:\Windows\System32\taskhostw.exe> <taskhostw.exe $(Arg0)>
+[12:38:03] 	508 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:38:18] 9a8: 384(384)-> c60 <\??\C:\Windows\system32\backgroundTaskHost.exe> <"C:\Windows\system32\backgroundTaskHost.exe" -ServerName:OobeHost.AppXdcwkjpb46w3zw4hbmx5jfxajhymjka0d.mca>
+[12:38:18] 	384 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:38:30] 9a4: 1258(1258)-> 10f4 <\??\C:\firefox.exe> <"C:\firefox.exe" >
+[12:38:30] 	1258 = "\Device\HarddiskVolume3\Program Files (x86)\Far2\Far.exe"
+[12:38:33] 9a8: afc(afc)-> 1170 <\??\C:\Windows\explorer.exe> <"C:\Windows\explorer.exe" >
+[12:38:33] 	afc = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[12:38:34] 9a4: 384(384)-> 6f4 <\??\C:\Windows\system32\DllHost.exe> <C:\Windows\system32\DllHost.exe /Processid:{AB8902B4-09CA-4BB6-B78D-A8F59079A8D5}>
+[12:38:34] 	384 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:38:42] 9a8: afc(afc)-> 11e0 <\??\C:\firefox.exe> <"C:\firefox.exe" >
+[12:38:42] 	afc = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[12:38:57] 9a4: afc(afc)-> 121c <\??\C:\DebugView\Dbgview.exe> <"C:\DebugView\Dbgview.exe" >
+[12:38:57] 	afc = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[12:39:00] 9a8: 300(300)-> 6ec <\??\C:\Windows\system32\svchost.exe> <C:\Windows\system32\svchost.exe -k InvSvcGroup -p>
+[12:39:00] 	300 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[12:39:00] 9a4: 300(300)-> 6e8 <\??\C:\Windows\system32\svchost.exe> <C:\Windows\system32\svchost.exe -k ClipboardSvcGroup -p>
+[12:39:00] 	300 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[12:39:00] 9a8: 300(300)-> 124c <\??\C:\Windows\system32\sppsvc.exe> <C:\Windows\system32\sppsvc.exe>
+[12:39:00] 	300 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[12:39:00] 9a4: 508(508)-> f94 <\??\C:\Windows\System32\taskhostw.exe> <taskhostw.exe SBServicing>
+[12:39:00] 	508 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:39:10] 9a8: 384(384)-> 10cc <\??\C:\Windows\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe> <"C:\Windows\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe" -ServerName:App.AppXtk181tbxbce2qsex02s8tw7hfxa9xb3t.mca>
+[12:39:10] 	384 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:39:11] 9a4: 384(384)-> 1190 <\??\C:\Windows\System32\RuntimeBroker.exe> <C:\Windows\System32\RuntimeBroker.exe -Embedding>
+[12:39:11] 	384 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:39:12] 9a8: 384(384)-> c30 <\??\C:\Windows\System32\rundll32.exe> <C:\Windows\System32\rundll32.exe shell32.dll,SHCreateLocalServerRunDll {c82192ee-6cb5-4bc0-9ef0-fb818773790a} -Embedding>
+[12:39:12] 	384 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:39:21] 9a4: 508(508)-> 298 <\??\C:\Windows\System32\consent.exe> <consent.exe 1288 406 00000191BC0EB210>
+[12:39:21] 	508 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:39:21] 9a8: 508(afc)-> 104 <\??\C:\DebugView\Dbgview.exe> <"C:\DebugView\Dbgview.exe" >
+[12:39:21] 	508 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:39:21] 	afc = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[12:39:22] 9a4: 300(300)-> 53c <\??\C:\Windows\system32\wbem\WmiApSrv.exe> <C:\Windows\system32\wbem\WmiApSrv.exe>
+[12:39:22] 	300 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[12:39:22] 9a8: 300(300)-> 830 <\??\C:\Windows\system32\wbem\WmiApSrv.exe> <C:\Windows\system32\wbem\WmiApSrv.exe>
+[12:39:22] 	300 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[12:39:30] 9a4: afc(afc)-> 9e0 <\??\C:\Windows\system32\mspaint.exe> <"C:\Windows\system32\mspaint.exe" >
+[12:39:30] 	afc = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[12:39:30] 9a8: 300(300)-> ac4 <\??\C:\Windows\system32\svchost.exe> <C:\Windows\system32\svchost.exe -k imgsvc>
+[12:39:30] 	300 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[12:40:01] 9a4: 508(508)-> 29c <\??\C:\Windows\System32\consent.exe> <consent.exe 1288 406 00000191BC033910>
+[12:40:01] 	508 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:40:01] 9a8: 508(afc)-> 7ac <\??\C:\DebugView\Dbgview.exe> <"C:\DebugView\Dbgview.exe" >
+[12:40:01] 	508 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:40:01] 	afc = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[12:40:22] 9a4: 300(300)-> a8c <\??\C:\Windows\system32\svchost.exe> <C:\Windows\system32\svchost.exe -k UdkSvcGroup>
+[12:40:22] 	300 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[12:40:43] 9a8: afc(afc)-> 6f4 <\??\C:\Windows\System32\control.exe> <"C:\Windows\System32\control.exe" >
+[12:40:43] 	afc = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[12:40:43] 9a4: 384(384)-> 10a0 <\??\C:\Windows\explorer.exe> <C:\Windows\explorer.exe /factory,{5BD95610-9434-43C2-886C-57852CC8A120} -Embedding>
+[12:40:43] 	384 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:40:43] 9a8: 384(384)-> f94 <\??\C:\Windows\SysWOW64\DllHost.exe> <C:\Windows\SysWOW64\DllHost.exe /Processid:{06622D85-6856-4460-8DE1-A81921B41C4B}>
+[12:40:43] 	384 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:40:59] 9a4: 384(384)-> 11f4 <\??\C:\Windows\system32\DllHost.exe> <C:\Windows\system32\DllHost.exe /Processid:{AB8902B4-09CA-4BB6-B78D-A8F59079A8D5}>
+[12:40:59] 	384 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:41:00] 9a8: 508(508)-> 588 <\??\C:\Windows\system32\wbem\WMIADAP.EXE> <wmiadap.exe /F /T /R>
+[12:41:00] 	508 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:41:02] 9a4: 10a0(10a0)-> 8b0 <\??\C:\Windows\system32\mmc.exe> <"C:\Windows\system32\mmc.exe" "C:\Windows\system32\services.msc" >
+[12:41:02] 	10a0 = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[12:41:02] 9a8: 508(508)-> 618 <\??\C:\Windows\System32\consent.exe> <consent.exe 1288 558 00000191BACDE390>
+[12:41:02] 	508 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:41:02] 9a4: 508(10a0)-> 54c <\??\C:\Windows\system32\mmc.exe> <"C:\Windows\system32\mmc.exe" "C:\Windows\system32\services.msc" >
+[12:41:02] 	508 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:41:02] 	10a0 = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[12:41:07] 9a8: 384(384)-> 714 <\??\C:\Windows\System32\RuntimeBroker.exe> <C:\Windows\System32\RuntimeBroker.exe -Embedding>
+[12:41:07] 	384 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:41:13] HandlerEx<00000000012D0330>(2 0 0000000000000000)
+[12:41:13] NT::ClientPort::~ClientPort<00000000012BF6C0>(00000000000001E0)
+[12:41:27] HandlerEx<00000000012D0330>(3 0 0000000000000000)
+[12:41:27] CONNECTION_REQUEST:8c8,8c8
+[12:41:27] 8c8> open=0, heap at 00007DF4B13F0000
+[12:41:34] 9a4: afc(afc)-> 854 <\??\C:\Dbg\SearchEx.exe> <"C:\Dbg\SearchEx.exe" >
+[12:41:34] 	afc = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[12:42:00] 9a8: 508(508)-> ca0 <\??\C:\Windows\system32\SecureBootEncodeUEFI.exe> <"C:\Windows\system32\SecureBootEncodeUEFI.exe">
+[12:42:00] 	508 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[12:42:00] 9a4: ca0(ca0)-> d20 <\SystemRoot\System32\Conhost.exe> <\??\C:\Windows\system32\conhost.exe 0xffffffff -ForceV1>
+[12:42:00] 	ca0 = "\Device\HarddiskVolume3\Windows\System32\SecureBootEncodeUEFI.exe"
+[12:42:10] 9a8: 1258(1258)-> 288 <\??\C:\Windows\system32\cmd.exe> <C:\Windows\system32\cmd.exe /c ""C:\vc\x64\del tl-srv.bat" ">
+[12:42:10] 	1258 = "\Device\HarddiskVolume3\Program Files (x86)\Far2\Far.exe"
+[12:42:10] 9a4: 288(288)-> 1310 <\??\C:\Windows\system32\regsvr32.exe> <regsvr32.exe  /u TL-Srv.dll>
+[12:42:10] 	288 = "\Device\HarddiskVolume3\Windows\System32\cmd.exe"
+[12:42:10] HandlerEx<00000000012D0330>(1 0 0000000000000000)
+[12:42:10] NT::ClientPort::~ClientPort<00000000012BF6A0>(00000000000001DC)
+[12:42:10] 8c8> DrvDisconnect..
+[12:42:10] DATAGRAM:8c8,8c8
+[12:42:10] 9a4> --LpcServer
+[12:42:10] DATAGRAM:8c8,8c8
+[12:42:10] 9a8> --LpcServer
+[12:42:10] 930> DrvDisconnect..
+[12:42:10] dwCurrentState=3
+[12:42:10] -- ServiceMain
+[12:42:10] NT::CService::~CService<00000000012D0330>
+[12:42:10] ScNotifyCallback(0 00000001 1 0 pid=0)
+[12:42:10] NT::DllUnregisterServer=0

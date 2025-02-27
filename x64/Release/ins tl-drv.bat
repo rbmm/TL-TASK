@@ -1,0 +1,1 @@
+sc create TL-DRV binpath= "%~dp0\tl-drv.dll" type= kernel start= demand error= normal

@@ -8,6 +8,7 @@ PVOID _G_pvUser, _G_heap, _G_hHeap;
 ULONG_PTR _G_Delta;
 EX_RUNDOWN_REF _G_RunRef;
 EX_PUSH_LOCK _G_PushLock;
+ERESOURCE _G_Lock;
 
 EXTERN_C __declspec(dllimport) POBJECT_TYPE* LpcPortObjectType;
 
@@ -149,6 +150,8 @@ void NTAPI DriverUnload(PDRIVER_OBJECT DriverObject)
 	{
 		IoDeleteDevice(_G_DeviceObject);
 	}
+
+	ExDeleteResourceLite(&_G_Lock);
 }
 
 NTSTATUS NTAPI CommitRoutine(IN PVOID Base,
@@ -228,7 +231,7 @@ NTSTATUS NTAPI OnCreate(_In_ PDEVICE_OBJECT /*DeviceObject*/, _Inout_ PIRP Irp)
 
 							RTL_HEAP_PARAMETERS hp = { sizeof(hp), 0, 0, 0, 0, 0, 0, cbSection, cbSection, CommitRoutine };
 
-							if (PVOID hHeap = RtlCreateHeap(0, MappedBase, 0, cbSection, 0, &hp))
+							if (PVOID hHeap = RtlCreateHeap(0, MappedBase, 0, cbSection, &_G_Lock, &hp))
 							{
 								DbgPrint("RtlCreateHeap=%p\n", hHeap);
 
@@ -366,6 +369,8 @@ NTSTATUS NTAPI DriverEntry(PDRIVER_OBJECT DriverObject, PUNICODE_STRING Registry
 	{
 		_G_DeviceObject->Flags &= ~DO_DEVICE_INITIALIZING;
 	}
+
+	ExInitializeResourceLite(&_G_Lock);
 
 	DbgPrint("%hs(%p, %p, %wZ)=%x\n", __FUNCTION__, DriverObject, _G_DeviceObject, RegistryPath, status);
 

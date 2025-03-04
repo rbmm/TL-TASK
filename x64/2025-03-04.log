@@ -1,0 +1,518 @@
+[00:53:49] NT::CService::CService<000000000049A590>
+[00:53:49] NT::DllRegisterServer=0
+[00:53:49] ++ ServiceMain
+[00:53:49] 10dc> ++LpcServer
+[00:53:49] CONNECTION_REQUEST:10c0,10c0
+[00:53:49] 10e0> ++LpcServer
+[00:53:49] 10bc> ++LpcServer
+[00:53:49] 10e4> ++LpcServer
+[00:53:49] 10c0> open=0, heap at 00007DF442D10000
+[00:53:52] 10dc: 2c8(2c8)-> 1160 <\??\C:\Windows\system32\taskhostw.exe> <taskhostw.exe $(Arg0)>
+[00:53:52] 	2c8 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:53:54] 10e0: b90(b90)-> 1174 <\??\C:\Windows\system32\cmd.exe> <"C:\Windows\system32\cmd.exe" >
+[00:53:54] 	b90 = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[00:53:54] 10bc: 1174(1174)-> 1148 <\SystemRoot\System32\Conhost.exe> <\??\C:\Windows\system32\conhost.exe 0xffffffff -ForceV1>
+[00:53:54] 	1174 = "\Device\HarddiskVolume3\Windows\System32\cmd.exe"
+[00:54:05] 10e4: 1174(1174)-> 11e8 <\??\C:\Windows\system32\ipconfig.exe> <ipconfig>
+[00:54:05] 	1174 = "\Device\HarddiskVolume3\Windows\System32\cmd.exe"
+[00:54:14] 10dc: 12ac(12ac)-> 11ac <\??\C:\firefox.exe> <"C:\firefox.exe" >
+[00:54:14] 	12ac = "\Device\HarddiskVolume3\Program Files (x86)\Far2\Far.exe"
+[00:54:23] 10e0: b90(b90)-> b68 <\??\C:\Dbg\DbgNew.exe> <"C:\Dbg\DbgNew.exe" >
+[00:54:23] 	b90 = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[00:54:23] 10bc: 2c8(2c8)-> 1248 <\??\C:\Windows\system32\consent.exe> <consent.exe 712 228 00000163E15D6BE0>
+[00:54:23] 	2c8 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:54:24] 10e4: 2c8(b90)-> 124c <\??\C:\Dbg\DbgNew.exe> <"C:\Dbg\DbgNew.exe" >
+[00:54:24] 	2c8 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:54:24] 	b90 = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[00:54:49] 10dc: 290(290)-> 139c <\??\C:\Windows\system32\SgrmBroker.exe> <C:\Windows\system32\SgrmBroker.exe>
+[00:54:49] 	290 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[00:54:49] 10e0: 290(290)-> 1018 <\??\C:\Windows\system32\sppsvc.exe> <C:\Windows\system32\sppsvc.exe>
+[00:54:49] 	290 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[00:54:54] 10bc: b90(b90)-> 12a8 <\??\C:\Windows\system32\mmc.exe> <"C:\Windows\system32\mmc.exe" "C:\Windows\system32\services.msc" >
+[00:54:54] 	b90 = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[00:54:54] 10e4: 2c8(2c8)-> 104c <\??\C:\Windows\system32\consent.exe> <consent.exe 712 422 00000163E1B08780>
+[00:54:54] 	2c8 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:54:54] 10dc: 2c8(b90)-> ed8 <\??\C:\Windows\system32\mmc.exe> <"C:\Windows\system32\mmc.exe" "C:\Windows\system32\services.msc" >
+[00:54:54] 	2c8 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:54:54] 	b90 = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[00:55:01] HandlerEx<000000000049A590>(2 0 0000000000000000)
+[00:55:01] NT::ClientPort::~ClientPort<000000000047CE20>(0000000000000220)
+[00:55:27] HandlerEx<000000000049A590>(3 0 0000000000000000)
+[00:55:27] CONNECTION_REQUEST:10c4,10c4
+[00:55:27] 10c4> open=0, heap at 00007DF442D10000
+[00:55:49] 10e4: 2c8(2c8)-> b8c <\??\C:\Windows\system32\taskhostw.exe> <taskhostw.exe AIKCertEnroll>
+[00:55:49] 	2c8 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:55:49] 10dc: 290(290)-> 338 <\??\C:\Windows\system32\svchost.exe> <C:\Windows\system32\svchost.exe -k LocalServiceAndNoImpersonation>
+[00:55:49] 	290 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[00:55:49] 10e0: 2c8(2c8)-> d2c <\??\C:\Windows\system32\wermgr.exe> <"C:\Windows\system32\wermgr.exe" -upload>
+[00:55:49] 	2c8 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:57:29] NT::CService::CService<0000000001190AE0>
+[00:57:29] ++ ServiceMain
+[00:57:29] 87c> ++LpcServer
+[00:57:29] CONNECTION_REQUEST:868,868
+[00:57:29] 880> ++LpcServer
+[00:57:29] 868> open=0, heap at 00007DF4CBE60000
+[00:57:29] 884> ++LpcServer
+[00:57:29] 888> ++LpcServer
+[00:57:29] 87c: 2f8(2f8)-> 8dc <\??\C:\Windows\system32\wermgr.exe> <"C:\Windows\system32\wermgr.exe" -upload>
+[00:57:29] 	2f8 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:57:29] 884: 2f8(2f8)-> 924 <\??\C:\Windows\system32\ClipRenew.exe> <"C:\Windows\system32\ClipRenew.exe" -e>
+[00:57:29] 	2f8 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:57:29] 888: 2a0(2a0)-> 960 <\??\C:\Windows\system32\svchost.exe> <C:\Windows\system32\svchost.exe -k wsappx -p>
+[00:57:29] 	2a0 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[00:57:29] 880: 2a0(2a0)-> 9b8 <\??\C:\Windows\System32\svchost.exe> <C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted>
+[00:57:29] 	2a0 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[00:57:29] 87c: 33c(33c)-> a2c <\??\C:\Windows\system32\wbem\wmiprvse.exe> <C:\Windows\system32\wbem\wmiprvse.exe -secured -Embedding>
+[00:57:29] 	33c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:57:32] 884: 2f8(2f8)-> a90 <\??\C:\Windows\system32\taskhostw.exe> <taskhostw.exe TpmTasks>
+[00:57:32] 	2f8 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:57:32] 888: 2a0(2a0)-> acc <\??\C:\Windows\system32\svchost.exe> <C:\Windows\system32\svchost.exe -k LocalServiceAndNoImpersonation>
+[00:57:32] 	2a0 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[00:57:34] 880: 2f8(2f8)-> b2c <\??\C:\Windows\system32\wermgr.exe> <"C:\Windows\system32\wermgr.exe" -upload>
+[00:57:34] 	2f8 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:57:39] 87c: 2f8(2f8)-> b54 <\??\C:\Windows\system32\taskhostw.exe> <taskhostw.exe SYSTEM>
+[00:57:39] 	2f8 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:57:49] 884: 33c(33c)-> b84 <\??\C:\Windows\system32\wbem\wmiprvse.exe> <C:\Windows\system32\wbem\wmiprvse.exe -Embedding>
+[00:57:49] 	33c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:57:50] 888: 2a0(2a0)-> bc4 <\??\C:\Windows\system32\svchost.exe> <C:\Windows\system32\svchost.exe -k LocalServiceAndNoImpersonation -p>
+[00:57:50] 	2a0 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[00:58:34] 880: 2a0(2a0)-> a74 <\??\C:\Windows\system32\svchost.exe> <C:\Windows\system32\svchost.exe -k LocalSystemNetworkRestricted>
+[00:58:34] 	2a0 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[00:58:34] 87c: 2f8(2f8)-> aac <\??\C:\Windows\system32\sihost.exe> <sihost.exe>
+[00:58:34] 	2f8 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:58:34] 884: 2a0(2a0)-> b00 <\??\C:\Windows\system32\svchost.exe> <C:\Windows\system32\svchost.exe -k UnistackSvcGroup>
+[00:58:34] 	2a0 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[00:58:34] 888: 2f8(2f8)-> a7c <\??\C:\Windows\system32\taskhostw.exe> <taskhostw.exe USER>
+[00:58:34] 	2f8 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:58:34] 880: 2f8(2f8)-> b3c <\??\C:\Windows\system32\taskhostw.exe> <taskhostw.exe {222A245B-E637-4AE9-A93F-A59CA119A75E}>
+[00:58:34] 	2f8 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:58:34] 87c: 2f8(2f8)-> a34 <\??\C:\Windows\system32\taskhostw.exe> <taskhostw.exe>
+[00:58:34] 	2f8 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:58:34] 884: 278(278)-> 344 <\??\C:\Windows\system32\userinit.exe> <C:\Windows\system32\userinit.exe>
+[00:58:34] 	278 = "\Device\HarddiskVolume3\Windows\System32\winlogon.exe"
+[00:58:34] 888: 344(344)-> 404 <\??\C:\Windows\Explorer.EXE> <C:\Windows\Explorer.EXE>
+[00:58:34] 	344 = "\Device\HarddiskVolume3\Windows\System32\userinit.exe"
+[00:58:34] 880: 2a0(2a0)-> 7d8 <\??\C:\Windows\System32\svchost.exe> <C:\Windows\System32\svchost.exe -k AppReadiness -p>
+[00:58:34] 	2a0 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[00:58:35] 87c: 2a0(2a0)-> c38 <\??\C:\Windows\system32\svchost.exe> <C:\Windows\system32\svchost.exe -k ClipboardSvcGroup -p>
+[00:58:35] 	2a0 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[00:58:36] 884: 33c(33c)-> d14 <\??\C:\Windows\SystemApps\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\StartMenuExperienceHost.exe> <"C:\Windows\SystemApps\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\StartMenuExperienceHost.exe" -ServerName:App.AppXywbrabmsek0gm3tkwpr5kwzbs55tkqay.mca>
+[00:58:36] 	33c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:58:36] 888: 33c(33c)-> d54 <\??\C:\Windows\system32\backgroundTaskHost.exe> <"C:\Windows\system32\backgroundTaskHost.exe" -ServerName:App.AppXmtcan0h2tfbfy7k9kn8hbxb6dmzz1zh0.mca>
+[00:58:36] 	33c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:58:36] 880: 33c(33c)-> d8c <\??\C:\Windows\System32\RuntimeBroker.exe> <C:\Windows\System32\RuntimeBroker.exe -Embedding>
+[00:58:36] 	33c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:58:36] 87c: 33c(33c)-> db0 <\??\C:\Windows\System32\RuntimeBroker.exe> <C:\Windows\System32\RuntimeBroker.exe -Embedding>
+[00:58:36] 	33c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:58:36] 884: 33c(33c)-> e44 <\??\C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe> <"C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe" -ServerName:CortanaUI.AppX8z9r6jm96hw4bsbneegw0kyxx296wr9t.mca>
+[00:58:36] 	33c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:58:38] 888: 33c(33c)-> f04 <\??\C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe> <"C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe" -ServerName:CortanaUI.AppX8z9r6jm96hw4bsbneegw0kyxx296wr9t.mca>
+[00:58:38] 	33c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:58:40] 880: 2f8(2f8)-> f44 <\??\C:\Windows\system32\consent.exe> <consent.exe 760 336 00000261B6D31BD0>
+[00:58:40] 	2f8 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:58:41] 87c: 33c(33c)-> fb8 <\??\C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe> <"C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe" -ServerName:CortanaUI.AppX8z9r6jm96hw4bsbneegw0kyxx296wr9t.mca>
+[00:58:41] 	33c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:58:42] 884: 2f8(404)-> ff4 <\??\C:\Program Files (x86)\Far2\Far.exe> <"C:\Program Files (x86)\Far2\Far.exe" >
+[00:58:42] 	2f8 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:58:42] 	404 = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[00:58:42] 888: ff4(ff4)-> d74 <\SystemRoot\System32\Conhost.exe> <\??\C:\Windows\system32\conhost.exe 0xffffffff -ForceV1>
+[00:58:42] 	ff4 = "\Device\HarddiskVolume3\Program Files (x86)\Far2\Far.exe"
+[00:58:43] 880: 33c(33c)-> 410 <\??\C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe> <"C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe" -ServerName:CortanaUI.AppX8z9r6jm96hw4bsbneegw0kyxx296wr9t.mca>
+[00:58:43] 	33c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:58:45] 87c: 33c(33c)-> 9c4 <\??\C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe> <"C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe" -ServerName:CortanaUI.AppX8z9r6jm96hw4bsbneegw0kyxx296wr9t.mca>
+[00:58:45] 	33c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:58:47] 884: 33c(33c)-> f24 <\??\C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe> <"C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe" -ServerName:CortanaUI.AppX8z9r6jm96hw4bsbneegw0kyxx296wr9t.mca>
+[00:58:47] 	33c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:58:47] 888: 404(404)-> ef8 <\??\C:\Program Files\VMware\VMware Tools\vmtoolsd.exe> <"C:\Program Files\VMware\VMware Tools\vmtoolsd.exe" -n vmusr>
+[00:58:47] 	404 = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[00:59:04] 880: 278(278)-> f90 <\??\C:\Windows\system32\wlrmdr.exe> < -c -s 0 -f 0 -t Empty -m Empty -a 0 -u Empty>
+[00:59:04] 	278 = "\Device\HarddiskVolume3\Windows\System32\winlogon.exe"
+[00:59:04] 87c: 2f8(2f8)-> f88 <\??\C:\Windows\system32\taskhostw.exe> <taskhostw.exe SyncFromCloud>
+[00:59:04] 	2f8 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:59:18] 884: 404(404)-> cb8 <\??\C:\Dbg\DbgNew.exe> <"C:\Dbg\DbgNew.exe" >
+[00:59:18] 	404 = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[00:59:18] 888: 2f8(2f8)-> 1bc <\??\C:\Windows\system32\consent.exe> <consent.exe 760 228 00000261B6D21040>
+[00:59:18] 	2f8 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:59:19] 880: 2f8(404)-> f34 <\??\C:\Dbg\DbgNew.exe> <"C:\Dbg\DbgNew.exe" >
+[00:59:19] 	2f8 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:59:19] 	404 = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[00:59:20] 87c: 2f8(2f8)-> ee8 <\??\C:\Windows\system32\consent.exe> <consent.exe 760 270 00000261B8251E90>
+[00:59:20] 	2f8 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:59:22] 884: 2f8(404)-> 614 <\??\C:\DebugView\Dbgview.exe> <"C:\DebugView\Dbgview.exe" >
+[00:59:22] 	2f8 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[00:59:22] 	404 = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[00:59:29] 888: 2a0(2a0)-> f90 <\??\C:\Windows\system32\SgrmBroker.exe> <C:\Windows\system32\SgrmBroker.exe>
+[00:59:29] 	2a0 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[00:59:29] 880: 2a0(2a0)-> f6c <\??\C:\Windows\system32\sppsvc.exe> <C:\Windows\system32\sppsvc.exe>
+[00:59:29] 	2a0 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[00:59:36] 87c: 2f8(2f8)-> f1c <\??\C:\Windows\system32\taskhostw.exe> <taskhostw.exe $(Arg0)>
+[00:59:36] 	2f8 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:01:08] NT::CService::CService<0000000000AE2110>
+[01:01:08] ++ ServiceMain
+[01:01:08] 87c> ++LpcServer
+[01:01:08] CONNECTION_REQUEST:870,870
+[01:01:08] 870> open=0, heap at 00007DF485F00000
+[01:01:08] 880> ++LpcServer
+[01:01:08] 884> ++LpcServer
+[01:01:08] 888> ++LpcServer
+[01:01:08] 87c: 304(304)-> 8b8 <\??\C:\Windows\system32\wermgr.exe> <"C:\Windows\system32\wermgr.exe" -upload>
+[01:01:08] 	304 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:01:09] 880: 304(304)-> 90c <\??\C:\Windows\system32\ClipRenew.exe> <"C:\Windows\system32\ClipRenew.exe" -e>
+[01:01:09] 	304 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:01:09] 884: 304(304)-> 944 <\??\C:\Windows\system32\dxgiadaptercache.exe> <"C:\Windows\system32\dxgiadaptercache.exe">
+[01:01:09] 	304 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:01:09] 888: 2a4(2a4)-> 954 <\??\C:\Windows\system32\svchost.exe> <C:\Windows\system32\svchost.exe -k wsappx -p>
+[01:01:09] 	2a4 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[01:01:09] 87c: 2a4(2a4)-> 9c0 <\??\C:\Windows\System32\svchost.exe> <C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted>
+[01:01:09] 	2a4 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[01:01:09] 880: 348(348)-> a40 <\??\C:\Windows\system32\wbem\wmiprvse.exe> <C:\Windows\system32\wbem\wmiprvse.exe -secured -Embedding>
+[01:01:09] 	348 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:01:12] 884: 304(304)-> a94 <\??\C:\Windows\system32\taskhostw.exe> <taskhostw.exe TpmTasks>
+[01:01:12] 	304 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:01:12] 888: 2a4(2a4)-> ad8 <\??\C:\Windows\system32\svchost.exe> <C:\Windows\system32\svchost.exe -k LocalServiceAndNoImpersonation>
+[01:01:12] 	2a4 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[01:01:13] 87c: 304(304)-> b24 <\??\C:\Windows\system32\wermgr.exe> <"C:\Windows\system32\wermgr.exe" -upload>
+[01:01:13] 	304 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:01:18] 880: 2a4(2a4)-> b80 <\??\C:\Windows\system32\svchost.exe> <C:\Windows\system32\svchost.exe -k LocalSystemNetworkRestricted>
+[01:01:18] 	2a4 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[01:01:18] 884: 304(304)-> bac <\??\C:\Windows\system32\sihost.exe> <sihost.exe>
+[01:01:18] 	304 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:01:18] 888: 2a4(2a4)-> bc4 <\??\C:\Windows\system32\svchost.exe> <C:\Windows\system32\svchost.exe -k UnistackSvcGroup>
+[01:01:18] 	2a4 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[01:01:18] 87c: 304(304)-> bf8 <\??\C:\Windows\system32\taskhostw.exe> <taskhostw.exe USER>
+[01:01:18] 	304 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:01:18] 880: 304(304)-> 7c0 <\??\C:\Windows\system32\taskhostw.exe> <taskhostw.exe {222A245B-E637-4AE9-A93F-A59CA119A75E}>
+[01:01:18] 	304 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:01:18] 884: 304(304)-> 170 <\??\C:\Windows\system32\taskhostw.exe> <taskhostw.exe>
+[01:01:18] 	304 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:01:18] 888: 278(278)-> b04 <\??\C:\Windows\system32\userinit.exe> <C:\Windows\system32\userinit.exe>
+[01:01:18] 	278 = "\Device\HarddiskVolume3\Windows\System32\winlogon.exe"
+[01:01:18] 87c: b04(b04)-> ab8 <\??\C:\Windows\Explorer.EXE> <C:\Windows\Explorer.EXE>
+[01:01:18] 	b04 = "\Device\HarddiskVolume3\Windows\System32\userinit.exe"
+[01:01:18] 880: 304(304)-> b20 <\??\C:\Windows\system32\taskhostw.exe> <taskhostw.exe SYSTEM>
+[01:01:18] 	304 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:01:19] 884: 2a4(2a4)-> 81c <\??\C:\Windows\System32\svchost.exe> <C:\Windows\System32\svchost.exe -k AppReadiness -p>
+[01:01:19] 	2a4 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[01:01:20] 888: 2a4(2a4)-> c4c <\??\C:\Windows\system32\svchost.exe> <C:\Windows\system32\svchost.exe -k ClipboardSvcGroup -p>
+[01:01:20] 	2a4 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[01:01:20] 87c: 348(348)-> d24 <\??\C:\Windows\SystemApps\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\StartMenuExperienceHost.exe> <"C:\Windows\SystemApps\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\StartMenuExperienceHost.exe" -ServerName:App.AppXywbrabmsek0gm3tkwpr5kwzbs55tkqay.mca>
+[01:01:20] 	348 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:01:20] 880: 348(348)-> d54 <\??\C:\Windows\system32\backgroundTaskHost.exe> <"C:\Windows\system32\backgroundTaskHost.exe" -ServerName:App.AppXmtcan0h2tfbfy7k9kn8hbxb6dmzz1zh0.mca>
+[01:01:20] 	348 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:01:20] 884: 348(348)-> d88 <\??\C:\Windows\System32\RuntimeBroker.exe> <C:\Windows\System32\RuntimeBroker.exe -Embedding>
+[01:01:20] 	348 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:01:21] 888: 348(348)-> dac <\??\C:\Windows\System32\RuntimeBroker.exe> <C:\Windows\System32\RuntimeBroker.exe -Embedding>
+[01:01:21] 	348 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:01:21] 87c: 348(348)-> e58 <\??\C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe> <"C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe" -ServerName:CortanaUI.AppX8z9r6jm96hw4bsbneegw0kyxx296wr9t.mca>
+[01:01:21] 	348 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:01:23] 880: 348(348)-> f10 <\??\C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe> <"C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe" -ServerName:CortanaUI.AppX8z9r6jm96hw4bsbneegw0kyxx296wr9t.mca>
+[01:01:23] 	348 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:01:25] 884: 348(348)-> f58 <\??\C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe> <"C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe" -ServerName:CortanaUI.AppX8z9r6jm96hw4bsbneegw0kyxx296wr9t.mca>
+[01:01:25] 	348 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:01:27] 888: 348(348)-> fa8 <\??\C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe> <"C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe" -ServerName:CortanaUI.AppX8z9r6jm96hw4bsbneegw0kyxx296wr9t.mca>
+[01:01:27] 	348 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:01:27] 87c: 348(348)-> fe4 <\??\C:\Windows\System32\RuntimeBroker.exe> <C:\Windows\System32\RuntimeBroker.exe -Embedding>
+[01:01:27] 	348 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:01:29] 880: 348(348)-> ca0 <\??\C:\Windows\system32\wbem\wmiprvse.exe> <C:\Windows\system32\wbem\wmiprvse.exe -Embedding>
+[01:01:29] 	348 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:01:29] 884: 348(348)-> e8c <\??\C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe> <"C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe" -ServerName:CortanaUI.AppX8z9r6jm96hw4bsbneegw0kyxx296wr9t.mca>
+[01:01:29] 	348 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:01:29] 888: 2a4(2a4)-> a98 <\??\C:\Windows\system32\svchost.exe> <C:\Windows\system32\svchost.exe -k LocalServiceAndNoImpersonation -p>
+[01:01:29] 	2a4 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[01:01:31] 87c: 348(348)-> 320 <\??\C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe> <"C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe" -ServerName:CortanaUI.AppX8z9r6jm96hw4bsbneegw0kyxx296wr9t.mca>
+[01:01:31] 	348 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:01:32] 880: ab8(ab8)-> a38 <\??\C:\Program Files\VMware\VMware Tools\vmtoolsd.exe> <"C:\Program Files\VMware\VMware Tools\vmtoolsd.exe" -n vmusr>
+[01:01:32] 	ab8 = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[01:01:33] 884: 304(304)-> f70 <\??\C:\Windows\system32\consent.exe> <consent.exe 772 270 000001765FAB2DF0>
+[01:01:33] 	304 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:01:34] 888: 304(ab8)-> fa4 <\??\C:\DebugView\Dbgview.exe> <"C:\DebugView\Dbgview.exe" >
+[01:01:34] 	304 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:01:34] 	ab8 = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[01:01:38] 87c: 304(304)-> e5c <\??\C:\Windows\system32\consent.exe> <consent.exe 772 336 000001765FA6A2F0>
+[01:01:38] 	304 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:01:39] 880: 304(ab8)-> fcc <\??\C:\Program Files (x86)\Far2\Far.exe> <"C:\Program Files (x86)\Far2\Far.exe" >
+[01:01:39] 	304 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:01:39] 	ab8 = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[01:01:39] 884: fcc(fcc)-> ef8 <\SystemRoot\System32\Conhost.exe> <\??\C:\Windows\system32\conhost.exe 0xffffffff -ForceV1>
+[01:01:39] 	fcc = "\Device\HarddiskVolume3\Program Files (x86)\Far2\Far.exe"
+[01:01:48] 888: 278(278)-> 7e4 <\??\C:\Windows\system32\wlrmdr.exe> < -c -s 0 -f 0 -t Empty -m Empty -a 0 -u Empty>
+[01:01:48] 	278 = "\Device\HarddiskVolume3\Windows\System32\winlogon.exe"
+[01:01:49] 87c: 304(304)-> 30c <\??\C:\Windows\system32\taskhostw.exe> <taskhostw.exe SyncFromCloud>
+[01:01:49] 	304 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:02:20] 880: 304(304)-> 810 <\??\C:\Windows\system32\taskhostw.exe> <taskhostw.exe $(Arg0)>
+[01:02:20] 	304 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:02:28] 884: fcc(fcc)-> efc <\??\C:\firefox.exe> <"C:\firefox.exe" >
+[01:02:28] 	fcc = "\Device\HarddiskVolume3\Program Files (x86)\Far2\Far.exe"
+[01:03:08] 888: 2a4(2a4)-> db8 <\??\C:\Windows\system32\SgrmBroker.exe> <C:\Windows\system32\SgrmBroker.exe>
+[01:03:08] 	2a4 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[01:03:09] 87c: 2a4(2a4)-> d08 <\??\C:\Windows\system32\sppsvc.exe> <C:\Windows\system32\sppsvc.exe>
+[01:03:09] 	2a4 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[01:24:14] NT::CService::CService<00000000008E10B0>
+[01:24:14] ++ ServiceMain
+[01:24:14] 848> ++LpcServer
+[01:24:14] CONNECTION_REQUEST:834,834
+[01:24:14] 834> open=0, heap at 00007DF4E9960000
+[01:24:14] 854> ++LpcServer
+[01:24:14] 850> ++LpcServer
+[01:24:14] 84c> ++LpcServer
+[01:24:14] 848: 31c(31c)-> 8ac <\??\C:\Windows\system32\dxgiadaptercache.exe> <"C:\Windows\system32\dxgiadaptercache.exe">
+[01:24:14] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:24:14] 854: 31c(31c)-> 910 <\??\C:\Windows\system32\ClipRenew.exe> <"C:\Windows\system32\ClipRenew.exe" -e>
+[01:24:14] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:24:14] 850: 31c(31c)-> 92c <\??\C:\Windows\system32\wermgr.exe> <"C:\Windows\system32\wermgr.exe" -upload>
+[01:24:14] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:24:14] 84c: 2a0(2a0)-> 95c <\??\C:\Windows\system32\svchost.exe> <C:\Windows\system32\svchost.exe -k wsappx -p>
+[01:24:14] 	2a0 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[01:24:14] 848: 2a0(2a0)-> 9b8 <\??\C:\Windows\System32\svchost.exe> <C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted>
+[01:24:14] 	2a0 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[01:24:14] 854: 618(618)-> a14 <\??\C:\Windows\system32\cmd.exe> <C:\Windows\system32\cmd.exe /c ""C:\Program Files\VMware\VMware Tools\poweron-vm-default.bat"">
+[01:24:14] 	618 = "\Device\HarddiskVolume3\Program Files\VMware\VMware Tools\vmtoolsd.exe"
+[01:24:15] 850: a14(a14)-> a20 <\SystemRoot\System32\Conhost.exe> <\??\C:\Windows\system32\conhost.exe 0xffffffff -ForceV1>
+[01:24:15] 	a14 = "\Device\HarddiskVolume3\Windows\System32\cmd.exe"
+[01:24:15] 84c: 338(338)-> a78 <\??\C:\Windows\system32\wbem\wmiprvse.exe> <C:\Windows\system32\wbem\wmiprvse.exe -secured -Embedding>
+[01:24:15] 	338 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:24:17] 848: 31c(31c)-> acc <\??\C:\Windows\system32\taskhostw.exe> <taskhostw.exe TpmTasks>
+[01:24:17] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:24:17] 854: 2a0(2a0)-> b0c <\??\C:\Windows\system32\svchost.exe> <C:\Windows\system32\svchost.exe -k LocalServiceAndNoImpersonation>
+[01:24:17] 	2a0 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[01:24:18] 850: 2a0(2a0)-> b7c <\??\C:\Windows\system32\svchost.exe> <C:\Windows\system32\svchost.exe -k LocalSystemNetworkRestricted>
+[01:24:18] 	2a0 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[01:24:18] 84c: 31c(31c)-> ba4 <\??\C:\Windows\system32\sihost.exe> <sihost.exe>
+[01:24:18] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:24:18] 848: 2a0(2a0)-> bc8 <\??\C:\Windows\system32\svchost.exe> <C:\Windows\system32\svchost.exe -k UnistackSvcGroup>
+[01:24:18] 	2a0 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[01:24:18] 854: 31c(31c)-> 67c <\??\C:\Windows\system32\taskhostw.exe> <taskhostw.exe USER>
+[01:24:18] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:24:18] 850: 31c(31c)-> 540 <\??\C:\Windows\system32\taskhostw.exe> <taskhostw.exe {222A245B-E637-4AE9-A93F-A59CA119A75E}>
+[01:24:18] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:24:18] 84c: 31c(31c)-> a2c <\??\C:\Windows\system32\taskhostw.exe> <taskhostw.exe>
+[01:24:18] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:24:18] 848: 270(270)-> aa8 <\??\C:\Windows\system32\userinit.exe> <C:\Windows\system32\userinit.exe>
+[01:24:18] 	270 = "\Device\HarddiskVolume3\Windows\System32\winlogon.exe"
+[01:24:18] 854: aa8(aa8)-> 658 <\??\C:\Windows\Explorer.EXE> <C:\Windows\Explorer.EXE>
+[01:24:18] 	aa8 = "\Device\HarddiskVolume3\Windows\System32\userinit.exe"
+[01:24:19] 850: 2a0(2a0)-> bec <\??\C:\Windows\System32\svchost.exe> <C:\Windows\System32\svchost.exe -k AppReadiness -p>
+[01:24:19] 	2a0 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[01:24:20] 84c: 2a0(2a0)-> c6c <\??\C:\Windows\system32\svchost.exe> <C:\Windows\system32\svchost.exe -k ClipboardSvcGroup -p>
+[01:24:20] 	2a0 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[01:24:21] 848: 338(338)-> d44 <\??\C:\Windows\SystemApps\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\StartMenuExperienceHost.exe> <"C:\Windows\SystemApps\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\StartMenuExperienceHost.exe" -ServerName:App.AppXywbrabmsek0gm3tkwpr5kwzbs55tkqay.mca>
+[01:24:21] 	338 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:24:21] 854: 338(338)-> d80 <\??\C:\Windows\system32\backgroundTaskHost.exe> <"C:\Windows\system32\backgroundTaskHost.exe" -ServerName:App.AppXmtcan0h2tfbfy7k9kn8hbxb6dmzz1zh0.mca>
+[01:24:21] 	338 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:24:21] 850: 338(338)-> db8 <\??\C:\Windows\System32\RuntimeBroker.exe> <C:\Windows\System32\RuntimeBroker.exe -Embedding>
+[01:24:21] 	338 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:24:21] 84c: 338(338)-> ddc <\??\C:\Windows\System32\RuntimeBroker.exe> <C:\Windows\System32\RuntimeBroker.exe -Embedding>
+[01:24:21] 	338 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:24:21] 848: 338(338)-> e74 <\??\C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe> <"C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe" -ServerName:CortanaUI.AppX8z9r6jm96hw4bsbneegw0kyxx296wr9t.mca>
+[01:24:21] 	338 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:24:21] 854: 31c(31c)-> f00 <\??\C:\Windows\system32\wermgr.exe> <"C:\Windows\system32\wermgr.exe" -upload>
+[01:24:21] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:24:23] 850: 338(338)-> f7c <\??\C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe> <"C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe" -ServerName:CortanaUI.AppX8z9r6jm96hw4bsbneegw0kyxx296wr9t.mca>
+[01:24:23] 	338 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:24:24] 84c: 31c(31c)-> fb8 <\??\C:\Windows\system32\consent.exe> <consent.exe 796 336 00000196D624ED30>
+[01:24:24] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:24:24] 848: 31c(31c)-> fe4 <\??\C:\Windows\system32\taskhostw.exe> <taskhostw.exe SYSTEM>
+[01:24:24] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:24:25] 854: 31c(658)-> d80 <\??\C:\Program Files (x86)\Far2\Far.exe> <"C:\Program Files (x86)\Far2\Far.exe" >
+[01:24:25] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:24:25] 	658 = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[01:24:25] 850: d80(d80)-> aec <\SystemRoot\System32\Conhost.exe> <\??\C:\Windows\system32\conhost.exe 0xffffffff -ForceV1>
+[01:24:25] 	d80 = "\Device\HarddiskVolume3\Program Files (x86)\Far2\Far.exe"
+[01:24:25] 84c: 338(338)-> f20 <\??\C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe> <"C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe" -ServerName:CortanaUI.AppX8z9r6jm96hw4bsbneegw0kyxx296wr9t.mca>
+[01:24:25] 	338 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:24:27] 848: 338(338)-> 9fc <\??\C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe> <"C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe" -ServerName:CortanaUI.AppX8z9r6jm96hw4bsbneegw0kyxx296wr9t.mca>
+[01:24:27] 	338 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:24:29] 854: 338(338)-> f70 <\??\C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe> <"C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe" -ServerName:CortanaUI.AppX8z9r6jm96hw4bsbneegw0kyxx296wr9t.mca>
+[01:24:29] 	338 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:24:31] 850: 338(338)-> e34 <\??\C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe> <"C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\SearchApp.exe" -ServerName:CortanaUI.AppX8z9r6jm96hw4bsbneegw0kyxx296wr9t.mca>
+[01:24:31] 	338 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:24:32] 84c: 658(658)-> fb8 <\??\C:\Program Files\VMware\VMware Tools\vmtoolsd.exe> <"C:\Program Files\VMware\VMware Tools\vmtoolsd.exe" -n vmusr>
+[01:24:32] 	658 = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[01:24:34] 848: 338(338)-> 1c0 <\??\C:\Windows\system32\wbem\wmiprvse.exe> <C:\Windows\system32\wbem\wmiprvse.exe -Embedding>
+[01:24:34] 	338 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:24:35] 854: 2a0(2a0)-> 8c8 <\??\C:\Windows\system32\svchost.exe> <C:\Windows\system32\svchost.exe -k LocalServiceAndNoImpersonation -p>
+[01:24:35] 	2a0 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[01:24:48] 850: 270(270)-> f10 <\??\C:\Windows\system32\wlrmdr.exe> < -c -s 0 -f 0 -t Empty -m Empty -a 0 -u Empty>
+[01:24:48] 	270 = "\Device\HarddiskVolume3\Windows\System32\winlogon.exe"
+[01:24:49] 84c: 31c(31c)-> cd0 <\??\C:\Windows\system32\taskhostw.exe> <taskhostw.exe SyncFromCloud>
+[01:24:49] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:24:51] 848: d80(d80)-> ca8 <\??\C:\Windows\system32\cmd.exe> <C:\Windows\system32\cmd.exe /c ""C:\vc\x64\del tl-srv.bat" ">
+[01:24:51] 	d80 = "\Device\HarddiskVolume3\Program Files (x86)\Far2\Far.exe"
+[01:24:51] 854: ca8(ca8)-> af0 <\??\C:\Windows\system32\regsvr32.exe> <regsvr32.exe  /u TL-Srv.dll>
+[01:24:51] 	ca8 = "\Device\HarddiskVolume3\Windows\System32\cmd.exe"
+[01:24:51] HandlerEx<00000000008E10B0>(1 0 0000000000000000)
+[01:24:51] 74c> DrvDisconnect..
+[01:24:51] NT::ClientPort::~ClientPort<00000000008BCEC0>(0000000000000224)
+[01:24:51] DATAGRAM:74c,74c
+[01:24:51] DATAGRAM:74c,74c
+[01:24:51] 850> --LpcServer
+[01:24:51] 84c> --LpcServer
+[01:24:51] DATAGRAM:74c,74c
+[01:24:51] DATAGRAM:74c,74c
+[01:24:51] 854> --LpcServer
+[01:24:51] 848> --LpcServer
+[01:24:51] 834> DrvDisconnect..
+[01:24:51] dwCurrentState=3
+[01:24:51] -- ServiceMain
+[01:24:51] NT::CService::~CService<00000000008E10B0>
+[01:24:51] ScNotifyCallback(0 00000004 3 0 pid=70c)
+[01:24:51] ScNotifyCallback(0 00000001 1 0 pid=0)
+[01:24:51] NT::DllUnregisterServer=0
+[01:25:11] NT::CService::CService<0000000000F4A590>
+[01:25:11] ++ ServiceMain
+[01:25:11] NT::DllRegisterServer=0
+[01:25:11] 650> ++LpcServer
+[01:25:11] a30> ++LpcServer
+[01:25:11] af0> ++LpcServer
+[01:25:11] 21c> ++LpcServer
+[01:25:11] CONNECTION_REQUEST:654,654
+[01:25:11] 654> open=0, heap at 00007DF452200000
+[01:25:17] a30: 658(658)-> fe0 <\??\C:\Windows\system32\cmd.exe> <"C:\Windows\system32\cmd.exe" >
+[01:25:17] 	658 = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[01:25:17] af0: fe0(fe0)-> b8c <\SystemRoot\System32\Conhost.exe> <\??\C:\Windows\system32\conhost.exe 0xffffffff -ForceV1>
+[01:25:17] 	fe0 = "\Device\HarddiskVolume3\Windows\System32\cmd.exe"
+[01:25:21] 21c: 31c(31c)-> d84 <\??\C:\Windows\system32\taskhostw.exe> <taskhostw.exe $(Arg0)>
+[01:25:21] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:25:47] 650: fe0(fe0)-> d70 <\??\C:\Windows\system32\help.exe> <help>
+[01:25:47] 	fe0 = "\Device\HarddiskVolume3\Windows\System32\cmd.exe"
+[01:25:52] a30: d80(d80)-> e38 <\??\C:\firefox.exe> <"C:\firefox.exe" >
+[01:25:52] 	d80 = "\Device\HarddiskVolume3\Program Files (x86)\Far2\Far.exe"
+[01:26:14] af0: 2a0(2a0)-> 19c <\??\C:\Windows\system32\SgrmBroker.exe> <C:\Windows\system32\SgrmBroker.exe>
+[01:26:14] 	2a0 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[01:26:14] 21c: 2a0(2a0)-> 468 <\??\C:\Windows\system32\sppsvc.exe> <C:\Windows\system32\sppsvc.exe>
+[01:26:14] 	2a0 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[01:26:54] 650: 658(658)-> c88 <\??\C:\Windows\system32\mmc.exe> <"C:\Windows\system32\mmc.exe" "C:\Windows\system32\services.msc" >
+[01:26:54] 	658 = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[01:26:54] a30: 31c(31c)-> 7dc <\??\C:\Windows\system32\consent.exe> <consent.exe 796 422 00000196D7A55780>
+[01:26:54] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:26:54] af0: 31c(658)-> b14 <\??\C:\Windows\system32\mmc.exe> <"C:\Windows\system32\mmc.exe" "C:\Windows\system32\services.msc" >
+[01:26:54] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:26:54] 	658 = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[01:27:09] 21c: 658(658)-> a88 <\??\C:\Dbg\DbgNew.exe> <"C:\Dbg\DbgNew.exe" >
+[01:27:09] 	658 = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[01:27:09] 650: 31c(31c)-> 5e4 <\??\C:\Windows\system32\consent.exe> <consent.exe 796 228 00000196D5FD0150>
+[01:27:09] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:27:10] a30: 31c(658)-> 850 <\??\C:\Dbg\DbgNew.exe> <"C:\Dbg\DbgNew.exe" >
+[01:27:10] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:27:10] 	658 = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[01:27:14] af0: 31c(31c)-> 6c8 <\??\C:\Windows\system32\taskhostw.exe> <taskhostw.exe>
+[01:27:14] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:27:14] 21c: 31c(31c)-> a48 <\??\C:\Windows\system32\wermgr.exe> <"C:\Windows\system32\wermgr.exe" -upload>
+[01:27:14] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:27:25] HandlerEx<0000000000F4A590>(2 0 0000000000000000)
+[01:27:25] NT::ClientPort::~ClientPort<0000000000F2CDF0>(0000000000000224)
+[01:27:42] HandlerEx<0000000000F4A590>(3 0 0000000000000000)
+[01:27:42] CONNECTION_REQUEST:238,238
+[01:27:42] 238> open=0, heap at 00007DF452200000
+[01:27:48] af0: 658(658)-> 4c8 <\??\C:\Windows\system32\cmd.exe> <"C:\Windows\system32\cmd.exe" >
+[01:27:48] 	658 = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[01:27:48] 21c: 4c8(4c8)-> 35c <\SystemRoot\System32\Conhost.exe> <\??\C:\Windows\system32\conhost.exe 0xffffffff -ForceV1>
+[01:27:48] 	4c8 = "\Device\HarddiskVolume3\Windows\System32\cmd.exe"
+[01:27:55] 650: 658(658)-> 574 <\??\C:\Dbg\run as pro.exe> <"C:\Dbg\run as pro.exe" >
+[01:27:55] 	658 = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[01:27:55] a30: 31c(31c)-> 584 <\??\C:\Windows\system32\consent.exe> <consent.exe 796 252 00000196D7A159F0>
+[01:27:55] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:27:57] af0: 31c(658)-> 824 <\??\C:\Dbg\run as pro.exe> <"C:\Dbg\run as pro.exe" >
+[01:27:57] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:27:57] 	658 = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[01:28:14] 21c: 31c(31c)-> ae8 <\??\C:\Windows\system32\wbem\WMIADAP.EXE> <wmiadap.exe /F /T /R>
+[01:28:14] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:28:23] 650: 824(2cc)-> 930 <\??\c:\windows\system32\cmd.exe> <"c:\windows\system32\cmd.exe">
+[01:28:23] 	824 = "\Device\HarddiskVolume3\Dbg\run as pro.exe"
+[01:28:23] 	2cc = "\Device\HarddiskVolume3\Windows\System32\lsass.exe"
+[01:28:23] a30: 930(930)-> bd8 <\SystemRoot\System32\Conhost.exe> <\??\C:\Windows\system32\conhost.exe 0xffffffff -ForceV1>
+[01:28:23] 	930 = "\Device\HarddiskVolume3\Windows\System32\cmd.exe"
+[01:29:14] af0: 31c(31c)-> 7a4 <\??\C:\Windows\system32\SecureBootEncodeUEFI.exe> <"C:\Windows\system32\SecureBootEncodeUEFI.exe">
+[01:29:14] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:29:14] 21c: 7a4(7a4)-> 6ec <\SystemRoot\System32\Conhost.exe> <\??\C:\Windows\system32\conhost.exe 0xffffffff -ForceV1>
+[01:29:14] 	7a4 = "\Device\HarddiskVolume3\Windows\System32\SecureBootEncodeUEFI.exe"
+[01:30:28] HandlerEx<0000000000F4A590>(1 0 0000000000000000)
+[01:30:28] 238> DrvDisconnect..
+[01:30:28] NT::ClientPort::~ClientPort<0000000000F2CF40>(0000000000000228)
+[01:30:28] DATAGRAM:238,238
+[01:30:28] DATAGRAM:238,238
+[01:30:28] a30> --LpcServer
+[01:30:28] af0> --LpcServer
+[01:30:28] DATAGRAM:238,238
+[01:30:28] DATAGRAM:238,238
+[01:30:28] 650> --LpcServer
+[01:30:28] 21c> --LpcServer
+[01:30:28] 654> DrvDisconnect..
+[01:30:28] -- ServiceMain
+[01:30:28] NT::CService::~CService<0000000000F4A590>
+[01:30:31] NT::CService::CService<0000000000D6A590>
+[01:30:31] ++ ServiceMain
+[01:30:31] 834> ++LpcServer
+[01:30:31] 82c> ++LpcServer
+[01:30:31] CONNECTION_REQUEST:b5c,b5c
+[01:30:31] 5e4> ++LpcServer
+[01:30:31] a84> ++LpcServer
+[01:30:31] b5c> open=0, heap at 00007DF49FE50000
+[01:30:35] 82c: 658(658)-> 5c4 <\??\C:\Dbg\GetPdb.exe> <"C:\Dbg\GetPdb.exe" >
+[01:30:35] 	658 = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[01:30:35] 5e4: 31c(31c)-> 804 <\??\C:\Windows\system32\consent.exe> <consent.exe 796 228 00000196D7A4E7A0>
+[01:30:35] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:30:36] 834: 31c(658)-> bd4 <\??\C:\Dbg\GetPdb.exe> <"C:\Dbg\GetPdb.exe" >
+[01:30:36] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:30:36] 	658 = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[01:32:11] a84: 658(658)-> 35c <\??\C:\Windows\system32\cmd.exe> <"C:\Windows\system32\cmd.exe" >
+[01:32:11] 	658 = "\Device\HarddiskVolume3\Windows\explorer.exe"
+[01:32:11] 82c: 35c(35c)-> 574 <\SystemRoot\System32\Conhost.exe> <\??\C:\Windows\system32\conhost.exe 0xffffffff -ForceV1>
+[01:32:11] 	35c = "\Device\HarddiskVolume3\Windows\System32\cmd.exe"
+[01:32:16] 5e4: d80(d80)-> 320 <\??\C:\firefox.exe> <"C:\firefox.exe" >
+[01:32:16] 	d80 = "\Device\HarddiskVolume3\Program Files (x86)\Far2\Far.exe"
+[01:34:22] 834: 338(338)-> ba0 <\??\C:\Windows\System32\oobe\UserOOBEBroker.exe> <C:\Windows\System32\oobe\UserOOBEBroker.exe -Embedding>
+[01:34:22] 	338 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:35:14] a84: d80(d80)-> 650 <\??\C:\firefox.exe> <"C:\firefox.exe" >
+[01:35:14] 	d80 = "\Device\HarddiskVolume3\Program Files (x86)\Far2\Far.exe"
+[01:39:14] 82c: 31c(31c)-> 7b0 <\??\C:\Windows\system32\taskhostw.exe> <taskhostw.exe>
+[01:39:14] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:39:14] 5e4: 31c(31c)-> a44 <\??\C:\Windows\system32\sc.exe> <"C:\Windows\system32\sc.exe" start pushtoinstall registration>
+[01:39:14] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:39:14] 834: a44(a44)-> f5c <\SystemRoot\System32\Conhost.exe> <\??\C:\Windows\system32\conhost.exe 0xffffffff -ForceV1>
+[01:39:14] 	a44 = "\Device\HarddiskVolume3\Windows\System32\sc.exe"
+[01:39:19] a84: 31c(31c)-> 7f4 <\??\C:\Windows\system32\taskhostw.exe> <taskhostw.exe -RegisterUserDevice -NewAccount>
+[01:39:19] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:39:19] 82c: 31c(31c)-> 220 <\??\C:\Windows\system32\taskhostw.exe> <taskhostw.exe -RegisterDevice -AccountChange>
+[01:39:19] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:39:19] 5e4: 31c(31c)-> b74 <\??\C:\Windows\system32\ProvTool.exe> <"C:\Windows\system32\ProvTool.exe" /turn 5 /source LogonIdleTask>
+[01:39:19] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:39:19] 834: 31c(31c)-> d30 <\??\C:\Windows\system32\UCPDMgr.exe> <"C:\Windows\system32\UCPDMgr.exe">
+[01:39:19] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:39:19] a84: 31c(31c)-> 820 <\??\C:\Windows\system32\taskhostw.exe> <taskhostw.exe Event>
+[01:39:19] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:39:19] 82c: d30(d30)-> 898 <\SystemRoot\System32\Conhost.exe> <\??\C:\Windows\system32\conhost.exe 0xffffffff -ForceV1>
+[01:39:19] 	d30 = "\Device\HarddiskVolume3\Windows\System32\UCPDMgr.exe"
+[01:39:20] 5e4: 31c(31c)-> 994 <\??\C:\Windows\system32\taskhostw.exe> <taskhostw.exe Install $(Arg0)>
+[01:39:20] 	31c = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:39:20] 834: 444(444)-> a0c <\??\C:\Windows\system32\defrag.exe> <"C:\Windows\system32\defrag.exe" -p 444 -s 0000000000000734 -b -OnlyPreferred C:>
+[01:39:20] 	444 = "\Device\HarddiskVolume3\Windows\System32\svchost.exe"
+[01:39:20] a84: a0c(a0c)-> 560 <\SystemRoot\System32\Conhost.exe> <\??\C:\Windows\system32\conhost.exe 0xffffffff -ForceV1>
+[01:39:20] 	a0c = "\Device\HarddiskVolume3\Windows\System32\Defrag.exe"
+[01:39:20] 82c: 2a0(2a0)-> 990 <\??\C:\Windows\system32\svchost.exe> <C:\Windows\system32\svchost.exe -k defragsvc>
+[01:39:20] 	2a0 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[01:39:20] 5e4: 2a0(2a0)-> dd0 <\??\C:\Windows\system32\svchost.exe> <C:\Windows\system32\svchost.exe -k netsvcs -p>
+[01:39:20] 	2a0 = "\Device\HarddiskVolume3\Windows\System32\services.exe"
+[01:41:28] 834: d80(d80)-> 9f8 <\??\C:\firefox.exe> <"C:\firefox.exe" >
+[01:41:28] 	d80 = "\Device\HarddiskVolume3\Program Files (x86)\Far2\Far.exe"
+[01:41:39] a84: d80(d80)-> 494 <\??\C:\Windows\system32\cmd.exe> <C:\Windows\system32\cmd.exe /c ""C:\vc\x64\del tl-srv.bat" ">
+[01:41:39] 	d80 = "\Device\HarddiskVolume3\Program Files (x86)\Far2\Far.exe"
+[01:41:39] 82c: 494(494)-> a48 <\??\C:\Windows\system32\regsvr32.exe> <regsvr32.exe  /u TL-Srv.dll>
+[01:41:39] 	494 = "\Device\HarddiskVolume3\Windows\System32\cmd.exe"
+[01:41:39] HandlerEx<0000000000D6A590>(1 0 0000000000000000)
+[01:41:39] fac> DrvDisconnect..
+[01:41:39] NT::ClientPort::~ClientPort<0000000000D4CE30>(0000000000000220)
+[01:41:39] DATAGRAM:fac,fac
+[01:41:39] 5e4> --LpcServer
+[01:41:39] DATAGRAM:fac,fac
+[01:41:39] 834> --LpcServer
+[01:41:39] DATAGRAM:fac,fac
+[01:41:39] 82c> --LpcServer
+[01:41:39] DATAGRAM:fac,fac
+[01:41:39] a84> --LpcServer
+[01:41:39] b5c> DrvDisconnect..
+[01:41:39] dwCurrentState=3
+[01:41:39] -- ServiceMain
+[01:41:39] NT::CService::~CService<0000000000D6A590>
+[01:41:39] ScNotifyCallback(0 00000001 1 0 pid=0)
+[01:41:39] NT::DllUnregisterServer=0

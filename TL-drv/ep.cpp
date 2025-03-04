@@ -5,7 +5,6 @@ _NT_BEGIN
 PVOID _G_Port;
 PEPROCESS _G_Process;
 PVOID _G_pvUser, _G_heap, _G_hHeap;
-PMDL _G_Mdl;
 ULONG_PTR _G_Delta;
 EX_RUNDOWN_REF _G_RunRef;
 EX_PUSH_LOCK _G_PushLock;
@@ -161,6 +160,8 @@ NTSTATUS NTAPI CommitRoutine(IN PVOID Base,
 	return 0;
 }
 
+#define SEC_NO_CHANGE 0x00400000
+
 NTSTATUS NTAPI OnCreate(_In_ PDEVICE_OBJECT /*DeviceObject*/, _Inout_ PIRP Irp)
 {
 	PFILE_OBJECT FileObject = IoGetCurrentIrpStackLocation(Irp)->FileObject;
@@ -197,37 +198,39 @@ NTSTATUS NTAPI OnCreate(_In_ PDEVICE_OBJECT /*DeviceObject*/, _Inout_ PIRP Irp)
 			enum { cbSection = 0x40000 }; // 256Kb
 			LARGE_INTEGER li = { cbSection };
 
-			if (0 <= (status = ZwCreateSection(&hSection, SECTION_MAP_READ, 0, &li, PAGE_READONLY, SEC_COMMIT, 0)))
+			if (0 <= (status = ZwCreateSection(&hSection, SECTION_MAP_READ | SECTION_MAP_WRITE, 
+				0, &li, PAGE_READWRITE, SEC_COMMIT | SEC_NO_CHANGE, 0)))
 			{
-				PVOID BaseAddress = 0, hHeap;
-				SIZE_T ViewSize = 0;
-
-				status = ZwMapViewOfSection(hSection, NtCurrentProcess(), &BaseAddress,
-					0, 0, 0, &ViewSize, ViewUnmap, MEM_TOP_DOWN, PAGE_READONLY);
-
+				PVOID Section;
+				
+				status = ObReferenceObjectByHandle(hSection, 0, 0, KernelMode, &Section, 0);
+				
 				NtClose(hSection);
-
-				DbgPrint("ba=%p, s = %x\n", BaseAddress, status);
 
 				if (0 <= status)
 				{
-					status = STATUS_INSUFFICIENT_RESOURCES;
+					PVOID BaseAddress = 0;
+					SIZE_T ViewSize = 0;
 
-					if (PMDL Mdl = IoAllocateMdl(BaseAddress, cbSection, FALSE, FALSE, 0))
+					PEPROCESS Process = PsGetCurrentProcess();
+					LARGE_INTEGER offset = {};
+
+					if (0 <= (status = MmMapViewOfSection(Section, Process, &BaseAddress,
+						0, 0, &offset, &ViewSize, ViewUnmap, MEM_TOP_DOWN, PAGE_READONLY)))
 					{
-						DbgPrint("mdl=%p\n", Mdl);
+						DbgPrint("MmMapViewOfSection=%p", BaseAddress);
 
-						MmProbeAndLockPages(Mdl, KernelMode, IoReadAccess);
+						PVOID MappedBase = 0;
 
-						if (PVOID heap = MmMapLockedPagesSpecifyCache(Mdl, KernelMode, MmCached, 0, FALSE, NormalPagePriority))
+						if (0 <= (status = MmMapViewInSystemSpace(Section, &MappedBase, &(ViewSize = 0))))
 						{
-							DbgPrint("heap=%p\n", heap);
+							DbgPrint("MmMapViewInSystemSpace=%p", MappedBase);
 
 							RTL_HEAP_PARAMETERS hp = { sizeof(hp), 0, 0, 0, 0, 0, 0, cbSection, cbSection, CommitRoutine };
 
-							if (hHeap = RtlCreateHeap(0, heap, 0, cbSection, 0, &hp))
+							if (PVOID hHeap = RtlCreateHeap(0, MappedBase, 0, cbSection, 0, &hp))
 							{
-								DbgPrint("hHeap=%p\n", hHeap);
+								DbgPrint("RtlCreateHeap=%p\n", hHeap);
 
 								KeEnterCriticalRegion();
 								ExfAcquirePushLockExclusive(&_G_PushLock);
@@ -241,15 +244,14 @@ NTSTATUS NTAPI OnCreate(_In_ PDEVICE_OBJECT /*DeviceObject*/, _Inout_ PIRP Irp)
 									FileObject->FsContext = Port;
 
 									_G_Port = Port, Port = 0;
-									ObfReferenceObject(_G_Process = PsGetCurrentProcess());
+									ObfReferenceObject(_G_Process = Process);
 
 									Irp->IoStatus.Information = (ULONG_PTR)BaseAddress;
 
 									_G_pvUser = BaseAddress;
-									_G_Mdl = Mdl;
-									_G_heap = heap;
+									_G_heap = MappedBase;
 									_G_hHeap = hHeap;
-									_G_Delta = (ULONG_PTR)heap - (ULONG_PTR)BaseAddress;
+									_G_Delta = (ULONG_PTR)MappedBase - (ULONG_PTR)BaseAddress;
 
 									ExReInitializeRundownProtection(&_G_RunRef);
 
@@ -269,14 +271,11 @@ NTSTATUS NTAPI OnCreate(_In_ PDEVICE_OBJECT /*DeviceObject*/, _Inout_ PIRP Irp)
 								RtlDestroyHeap(hHeap);
 							}
 
-							MmUnmapLockedPages(heap, Mdl);
+							MmUnmapViewInSystemSpace(MappedBase);
 						}
-
-						MmUnlockPages(Mdl);
-						IoFreeMdl(Mdl);
 					}
 
-					ZwUnmapViewOfSection(NtCurrentProcess(), BaseAddress);
+					MmUnmapViewOfSection(Process, BaseAddress);
 				}
 			}
 
@@ -299,8 +298,8 @@ NTSTATUS NTAPI OnCleanup(_In_ PDEVICE_OBJECT /*DeviceObject*/, _Inout_ PIRP Irp)
 	KeEnterCriticalRegion();
 	ExfAcquirePushLockExclusive(&_G_PushLock);
 
-	PVOID Process = 0, Port = 0;
-	PMDL Mdl = 0;
+	PVOID Port = 0;
+	PEPROCESS Process = 0;
 	PVOID pvUser = 0, heap = 0, hHeap = 0;
 
 	if (_G_Port && _G_Port == FileObject->FsContext)
@@ -312,7 +311,6 @@ NTSTATUS NTAPI OnCleanup(_In_ PDEVICE_OBJECT /*DeviceObject*/, _Inout_ PIRP Irp)
 		Process = _G_Process, _G_Process = 0;
 		FileObject->FsContext = 0;
 
-		Mdl = _G_Mdl, _G_Mdl = 0;
 		heap = _G_heap, _G_heap = 0;
 		hHeap = _G_hHeap, _G_hHeap = 0;
 		pvUser = _G_pvUser, _G_pvUser = 0;
@@ -323,16 +321,14 @@ NTSTATUS NTAPI OnCleanup(_In_ PDEVICE_OBJECT /*DeviceObject*/, _Inout_ PIRP Irp)
 
 	if (Port)
 	{
-		ObfDereferenceObject(Port);
-		ObfDereferenceObject(Process);
-
 		RtlDestroyHeap(hHeap);
-		MmUnmapLockedPages(heap, Mdl);
-		MmUnlockPages(Mdl);
-		IoFreeMdl(Mdl);
-		ZwUnmapViewOfSection(NtCurrentProcess(), pvUser);
+		MmUnmapViewInSystemSpace(heap);
+		MmUnmapViewOfSection(Process, pvUser);
 
-		DbgPrint("Port removed %p %p %p !!\n", Port, Mdl, heap);
+		ObfDereferenceObject(Process);
+		ObfDereferenceObject(Port);
+
+		DbgPrint("Port removed %p %p %p !!\n", Port, pvUser, heap);
 	}
 
 	Irp->IoStatus.Information = 0;

@@ -158,6 +158,7 @@ HRESULT WINAPI DllRegisterServer()
 
 				if (SC_HANDLE hSCManager = HR(hr, OpenSCManagerW(NULL, NULL, SC_MANAGER_CREATE_SERVICE )))
 				{
+					// //SERVICE_DEMAND_START
 					if (SC_HANDLE hService = HR(hr, CreateServiceW(hSCManager, ServiceName, L"Rbmm TL Service", 
 						SERVICE_START, SERVICE_WIN32_OWN_PROCESS, SERVICE_AUTO_START, SERVICE_ERROR_NORMAL,
 						lpBinaryPathName, NULL, NULL, NULL, 0, NULL)))

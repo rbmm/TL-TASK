@@ -9,14 +9,19 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TL-srv", "TL-srv\TL-srv.vcx
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|ARM64 = Release|ARM64
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CD6BEA5-E42B-9C42-B68C-150436DFF2D4}.Release|ARM64.ActiveCfg = Release|ARM64
+		{4CD6BEA5-E42B-9C42-B68C-150436DFF2D4}.Release|ARM64.Build.0 = Release|ARM64
 		{4CD6BEA5-E42B-9C42-B68C-150436DFF2D4}.Release|x64.ActiveCfg = Release|x64
 		{4CD6BEA5-E42B-9C42-B68C-150436DFF2D4}.Release|x64.Build.0 = Release|x64
 		{4CD6BEA5-E42B-9C42-B68C-150436DFF2D4}.Release|x86.ActiveCfg = Release|Win32
 		{4CD6BEA5-E42B-9C42-B68C-150436DFF2D4}.Release|x86.Build.0 = Release|Win32
+		{5E41CA03-EA85-4796-DAB6-9662B9B72B5E}.Release|ARM64.ActiveCfg = Release|ARM64
+		{5E41CA03-EA85-4796-DAB6-9662B9B72B5E}.Release|ARM64.Build.0 = Release|ARM64
 		{5E41CA03-EA85-4796-DAB6-9662B9B72B5E}.Release|x64.ActiveCfg = Release|x64
 		{5E41CA03-EA85-4796-DAB6-9662B9B72B5E}.Release|x64.Build.0 = Release|x64
 		{5E41CA03-EA85-4796-DAB6-9662B9B72B5E}.Release|x86.ActiveCfg = Release|Win32
@@ -26,6 +31,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {F5F8EFE2-9EA8-4120-B5E8-024FE848034C}
+		    SolutionGuid = {F5F8EFE2-9EA8-4120-B5E8-024FE848034C}
 	EndGlobalSection
 EndGlobal

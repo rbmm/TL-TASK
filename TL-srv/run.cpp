@@ -125,7 +125,10 @@ void LpcServer(HANDLE PortHandle, PULONG pdwThread)
 						(ULONG)(ULONG_PTR)msg.CreateInfo.ProcessId,
 						msg.CreateInfo.ImageFileName, msg.CreateInfo.CommandLine);
 
+					msg.u1.s1.DataLength = 0;
+
 					PrintProcessName(msg.CreateInfo.CreatingThreadId.UniqueProcess);
+
 					if (msg.CreateInfo.CreatingThreadId.UniqueProcess != msg.CreateInfo.ParentProcessId)
 					{
 						PrintProcessName(msg.CreateInfo.ParentProcessId);
@@ -135,6 +138,7 @@ void LpcServer(HANDLE PortHandle, PULONG pdwThread)
 					{
 						if (!_wcsicmp(pc + 1, L"Firefox.exe"))
 						{
+							msg.u1.s1.DataLength = sizeof(NTSTATUS);
 							msg.CreateInfo.CreationStatus = STATUS_ACCESS_DISABLED_BY_POLICY_DEFAULT;
 						}
 					}

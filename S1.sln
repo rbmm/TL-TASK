@@ -7,6 +7,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TL-drv", "TL-drv\TL-drv.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TL-srv", "TL-srv\TL-srv.vcxproj", "{5E41CA03-EA85-4796-DAB6-9662B9B72B5E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LdrpKernel32", "LdrpKernel32\LdrpKernel32.vcxproj", "{E8C7263D-87DA-6F6C-EF9D-CCF54EA7DC51}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kilk", "kilk\kilk.vcxproj", "{D30D5C34-66C3-ADC0-C088-1A5D0374A5FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Release|ARM64 = Release|ARM64
@@ -26,6 +30,18 @@ Global
 		{5E41CA03-EA85-4796-DAB6-9662B9B72B5E}.Release|x64.Build.0 = Release|x64
 		{5E41CA03-EA85-4796-DAB6-9662B9B72B5E}.Release|x86.ActiveCfg = Release|Win32
 		{5E41CA03-EA85-4796-DAB6-9662B9B72B5E}.Release|x86.Build.0 = Release|Win32
+		{E8C7263D-87DA-6F6C-EF9D-CCF54EA7DC51}.Release|ARM64.ActiveCfg = Release|x64
+		{E8C7263D-87DA-6F6C-EF9D-CCF54EA7DC51}.Release|ARM64.Build.0 = Release|x64
+		{E8C7263D-87DA-6F6C-EF9D-CCF54EA7DC51}.Release|x64.ActiveCfg = Release|x64
+		{E8C7263D-87DA-6F6C-EF9D-CCF54EA7DC51}.Release|x64.Build.0 = Release|x64
+		{E8C7263D-87DA-6F6C-EF9D-CCF54EA7DC51}.Release|x86.ActiveCfg = Release|Win32
+		{E8C7263D-87DA-6F6C-EF9D-CCF54EA7DC51}.Release|x86.Build.0 = Release|Win32
+		{D30D5C34-66C3-ADC0-C088-1A5D0374A5FF}.Release|ARM64.ActiveCfg = Release|x64
+		{D30D5C34-66C3-ADC0-C088-1A5D0374A5FF}.Release|ARM64.Build.0 = Release|x64
+		{D30D5C34-66C3-ADC0-C088-1A5D0374A5FF}.Release|x64.ActiveCfg = Release|x64
+		{D30D5C34-66C3-ADC0-C088-1A5D0374A5FF}.Release|x64.Build.0 = Release|x64
+		{D30D5C34-66C3-ADC0-C088-1A5D0374A5FF}.Release|x86.ActiveCfg = Release|Win32
+		{D30D5C34-66C3-ADC0-C088-1A5D0374A5FF}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

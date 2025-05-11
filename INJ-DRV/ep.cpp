@@ -6,8 +6,18 @@ _NT_BEGIN
 
 EXTERN_C { PDRIVER_OBJECT _G_DriverObject; }
 
-RTL_RUN_ONCE _G_RunOncex64{}, _G_RunOncex86{};
-ULONG _G_rvax64, _G_rvax86;
+RTL_RUN_ONCE
+#ifdef _WIN64
+_G_RunOncex86{}, 
+#endif // _WIN64
+_G_RunOncex64{};
+
+ULONG
+#ifdef _WIN64
+_G_rvax86, 
+#endif // _WIN64
+_G_rvax64;
+
 
 /*++
 
@@ -140,7 +150,11 @@ VOID CALLBACK _NormalRoutine(PKAPC Apc, PVOID Section, BOOL bWow)
 
 	if (0 <= status)
 	{
-		ULONG* prva = bWow ? &_G_rvax86 : &_G_rvax64, rva = *prva;
+		ULONG* prva = 
+#ifdef _WIN64
+			bWow ? &_G_rvax86 : 
+#endif
+			&_G_rvax64, rva = *prva;
 
 		if (!rva)
 		{
@@ -190,8 +204,11 @@ VOID CALLBACK _NormalRoutine(PKAPC Apc, PVOID Section, BOOL bWow)
 			ObfReferenceObject(_G_DriverObject);
 
 			if (KeInsertQueueApc(Apc, 
+#ifdef _WIN64
 #pragma warning (suppress : 4310)
-				bWow ? (PVOID)(ULONG_PTR)(ULONG)(ULONG_PTR)NtCurrentProcess() : NtCurrentProcess(),
+				bWow ? (PVOID)(ULONG_PTR)(ULONG)(ULONG_PTR)NtCurrentProcess() : 
+#endif
+				NtCurrentProcess(),
 				BaseAddress, IO_NO_INCREMENT))
 			{
 				DbgPrint("InsertQueueApc(%p, %p, %p)\n", BaseAddress, NormalContext, NormalRoutine);
@@ -409,7 +426,10 @@ void SetProtectedBit(PEPROCESS Process, BOOL IsProtectedProcess)
 	if (PsIsProtectedProcess(Process))
 	{
 		_PEB* peb;// IsProtectedProcess at the same place in 32/64 bit PEB (+3 bytes offset) 
-		if ((peb = (_PEB*)PsGetProcessWow64Process(Process)) ||
+		if (
+#ifdef _WIN64
+			(peb = (_PEB*)PsGetProcessWow64Process(Process)) ||
+#endif
 			(peb = PsGetProcessPeb(Process)))
 		{
 			peb->IsProtectedProcess = IsProtectedProcess;
@@ -450,6 +470,7 @@ VOID CALLBACK OnLoadImage(
 			PCWSTR pcszMyDllPath = 0, pcszKnownNt = 0, pcszKnownMy = 0;
 			BOOL wow;
 
+#ifdef _WIN64
 			if (PsGetProcessWow64Process(Process))
 			{
 				RunOnce = &_G_RunOncex86;
@@ -459,6 +480,7 @@ VOID CALLBACK OnLoadImage(
 				wow = true;
 			}
 			else
+#endif
 			{
 				RunOnce = &_G_RunOncex64;
 				pcszMyDllPath = L"\\systemroot\\system32\\]]rbmm[[.dll";
@@ -508,7 +530,9 @@ void NTAPI DriverUnload(PDRIVER_OBJECT DriverObject)
 {
 	PsRemoveLoadImageNotifyRoutine(OnLoadImage);
 
+#ifdef _WIN64
 	CloseSection(&_G_RunOncex86);
+#endif
 	CloseSection(&_G_RunOncex64);
 
 	DbgPrint("DriverUnload(%p)\n", DriverObject);

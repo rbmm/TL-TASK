@@ -45,10 +45,10 @@
       <EntryPointSymbol>GsDriverEntry</EntryPointSymbol>
       <AdditionalOptions>/INTEGRITYCHECK /EMITPOGOPHASEINFO /EMITVOLATILEMETADATA:NO /kernel %(AdditionalOptions)</AdditionalOptions>
       <Driver>Driver</Driver>
-      <AdditionalDependencies>ntoskrnl.lib;BufferOverflowK.lib</AdditionalDependencies>
+      <AdditionalDependencies>ntoskrnl.lib;BufferOverflowK.lib;hal.lib</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command >copy $(TargetPath) $(TargetPath).notsigned
+      <Command>copy $(TargetPath) $(TargetPath).notsigned
 $(SolutionDir)cta.exe *3ec2a996bd5319d0f6137917a1678e785e69e350*$(TargetPath)*sign*nowait</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>

@@ -1,4 +1,5 @@
 .686p
+.model flat
 
 extern __imp_@ObfDereferenceObject@4:DWORD
 extern __G_DriverObject:DWORD
@@ -7,7 +8,7 @@ extern ?_RundownRoutine@NT@@YGXPAU_KAPC@1@@Z : PROC ; void __stdcall NT::_Rundow
 extern ?_NormalRoutine@NT@@YGXPAU_KAPC@1@PAXH@Z : PROC ; void __stdcall NT::_NormalRoutine(struct NT::_KAPC *,void *,int)
 extern ?_KernelRoutine@NT@@YGXPAU_KAPC@1@PAP6GXPAX11@ZPAPAX33@Z : PROC ; void __stdcall NT::_KernelRoutine(struct NT::_KAPC *,void (__stdcall **)(void *,void *,void *),void **,void **,void **)
 
-_TEXT SEGMENT
+.code
 
 ?RundownRoutine@NT@@YGXPAU_KAPC@1@@Z proc
 		mov eax,[esp]
@@ -42,6 +43,18 @@ _TEXT SEGMENT
 		jmp __imp_@ObfDereferenceObject@4
 ?NormalRoutine@NT@@YGXPAX00@Z endp
 
-_TEXT ENDS
+.const
+
+public ?SC_begin@@3QBEB, ?SC_end@@3QBEB, ?DLL_begin@@3QBEB, ?DLL_end@@3QBEB
+
+?DLL_begin@@3QBEB LABEL BYTE
+INCLUDE <../../SC/Y-D/x86.asm>
+?DLL_end@@3QBEB LABEL BYTE
+
+ALIGN 16
+
+?SC_begin@@3QBEB LABEL BYTE
+INCLUDE <../../SC/ScLfm/ScLfm.x86.asm>
+?SC_end@@3QBEB LABEL BYTE
 
 END

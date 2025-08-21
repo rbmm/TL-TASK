@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Y-DRV", "Y-DRV\Y-DRV.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kmdf-00", "kmdf-00\kmdf-00.vcxproj", "{D32D5C34-66C3-ADC0-C788-1A5D0374A5FF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BE", "BE\BE.vcxproj", "{DAF828E6-DD75-A4CD-9B3E-07F542F12A4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Release|ARM64 = Release|ARM64
@@ -74,12 +76,18 @@ Global
 		{D32D5C34-66C3-ADC0-C788-1A5D0374A5FF}.Release|x64.Build.0 = Release|x64
 		{D32D5C34-66C3-ADC0-C788-1A5D0374A5FF}.Release|x86.ActiveCfg = Release|Win32
 		{D32D5C34-66C3-ADC0-C788-1A5D0374A5FF}.Release|x86.Build.0 = Release|Win32
+		{DAF828E6-DD75-A4CD-9B3E-07F542F12A4F}.Release|ARM64.ActiveCfg = Release|x64
+		{DAF828E6-DD75-A4CD-9B3E-07F542F12A4F}.Release|ARM64.Build.0 = Release|x64
+		{DAF828E6-DD75-A4CD-9B3E-07F542F12A4F}.Release|x64.ActiveCfg = Release|x64
+		{DAF828E6-DD75-A4CD-9B3E-07F542F12A4F}.Release|x64.Build.0 = Release|x64
+		{DAF828E6-DD75-A4CD-9B3E-07F542F12A4F}.Release|x86.ActiveCfg = Release|Win32
+		{DAF828E6-DD75-A4CD-9B3E-07F542F12A4F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {94E8AC8B-61FB-4D57-B3C4-53649811CB22}
 		    SolutionGuid = {F5F8EFE2-9EA8-4120-B5E8-024FE848034C}
+		SolutionGuid = {94E8AC8B-61FB-4D57-B3C4-53649811CB22}
 	EndGlobalSection
 EndGlobal

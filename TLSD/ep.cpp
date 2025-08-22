@@ -17,16 +17,6 @@ ObDuplicateObject(
 	_In_ KPROCESSOR_MODE PreviousMode
 );
 
-EXTERN_C
-NTSYSAPI
-NTSTATUS
-NTAPI
-RtlGetControlSecurityDescriptor(
-	_In_ PSECURITY_DESCRIPTOR pSecurityDescriptor,
-	_Out_ PSECURITY_DESCRIPTOR_CONTROL pControl,
-	_Out_ PULONG lpdwRevision
-);
-
 PDEVICE_OBJECT _G_DeviceObject;
 
 void NTAPI DriverUnload(PDRIVER_OBJECT DriverObject)
@@ -37,48 +27,6 @@ void NTAPI DriverUnload(PDRIVER_OBJECT DriverObject)
 	{
 		IoDeleteDevice(_G_DeviceObject);
 	}
-}
-
-BOOL IsTrustedSD(PSECURITY_DESCRIPTOR SecurityDescriptor)
-{
-	PACL Acl;
-	BOOLEAN bPresent, bDefault;
-	if (SecurityDescriptor && 
-		0 <= RtlGetSaclSecurityDescriptor(SecurityDescriptor, &bPresent, &Acl, &bDefault) && 
-		bPresent && Acl)
-	{
-		if (ULONG AceCount = Acl->AceCount)
-		{
-			union {
-				PVOID pv;
-				PBYTE pb;
-				PACE_HEADER ph;
-				PACCESS_ALLOWED_ACE pah;
-			};
-
-			pv = Acl + 1;
-
-			do
-			{
-				switch (ph->AceType)
-				{
-				case SYSTEM_PROCESS_TRUST_LABEL_ACE_TYPE:
-					PSID Sid = &pah->SidStart;
-					static const SID_IDENTIFIER_AUTHORITY pta = SECURITY_PROCESS_TRUST_AUTHORITY;
-					if (SECURITY_PROCESS_TRUST_AUTHORITY_RID_COUNT == *RtlSubAuthorityCountSid(Sid) &&
-						!memcmp(&pta, RtlIdentifierAuthoritySid(Sid), sizeof(pta)))
-					{
-						if (*RtlSubAuthoritySid(Sid, 0) || *RtlSubAuthoritySid(Sid, 1))
-						{
-							return TRUE;
-						}
-					}
-				}
-			} while (pb += ph->AceSize, --AceCount);
-		}
-	}
-
-	return FALSE;
 }
 
 NTSTATUS NTAPI OnCreate(_In_ PDEVICE_OBJECT /*DeviceObject*/, _Inout_ PIRP Irp)
@@ -96,7 +44,7 @@ NTSTATUS NTAPI OnCreate(_In_ PDEVICE_OBJECT /*DeviceObject*/, _Inout_ PIRP Irp)
 	NTSTATUS status = STATUS_INVALID_PARAMETER;
 	HANDLE hFile = 0;
 
-	if (IsTrustedSD(oa.SecurityDescriptor))
+	//if (IsTrustedSD(oa.SecurityDescriptor))
 	{
 		ACCESS_MASK DesiredAccess = IrpSp->Parameters.Create.SecurityContext->DesiredAccess;
 

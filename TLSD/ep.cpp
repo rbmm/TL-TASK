@@ -37,43 +37,38 @@ NTSTATUS NTAPI OnCreate(_In_ PDEVICE_OBJECT /*DeviceObject*/, _Inout_ PIRP Irp)
 	Irp->IoStatus.Information = 0;
 
 	OBJECT_ATTRIBUTES oa = {
-		sizeof(oa), 0, &FileObject->FileName, 0,
+		sizeof(oa), 0, &FileObject->FileName, OBJ_KERNEL_HANDLE,
 		IrpSp->Parameters.Create.SecurityContext->AccessState->SecurityDescriptor
 	};
 
 	NTSTATUS status = STATUS_INVALID_PARAMETER;
 	HANDLE hFile = 0;
 
-	//if (IsTrustedSD(oa.SecurityDescriptor))
+	ACCESS_MASK DesiredAccess = IrpSp->Parameters.Create.SecurityContext->DesiredAccess;
+
+	status = STATUS_ACCESS_DENIED;
+
+	if (FILE_WRITE_DATA & DesiredAccess)
 	{
-		ACCESS_MASK DesiredAccess = IrpSp->Parameters.Create.SecurityContext->DesiredAccess;
+		IO_STATUS_BLOCK iosb;
+		ULONG Options = IrpSp->Parameters.Create.Options;
+		KAPC_STATE ApcState;
+		KeStackAttachProcess(PsInitialSystemProcess, &ApcState);
 
-		status = STATUS_ACCESS_DENIED;
+		status = ZwCreateFile(&hFile, DesiredAccess,
+			&oa, &iosb, &Irp->Overlay.AllocationSize, IrpSp->Parameters.Create.FileAttributes,
+			IrpSp->Parameters.Create.ShareAccess, Options >> 24, Options & 0x00FFFFFF,
+			Irp->AssociatedIrp.SystemBuffer,
+			IrpSp->Parameters.Create.EaLength);
 
-		if (FILE_WRITE_DATA & DesiredAccess)
+		KeUnstackDetachProcess(&ApcState);
+
+		if (0 <= status)
 		{
-			IO_STATUS_BLOCK iosb;
-			ULONG Options = IrpSp->Parameters.Create.Options;
-			KAPC_STATE ApcState;
-			KeStackAttachProcess(PsInitialSystemProcess, &ApcState);
-
-			status = ZwCreateFile(&hFile, DesiredAccess,
-				&oa, &iosb, &Irp->Overlay.AllocationSize, IrpSp->Parameters.Create.FileAttributes,
-				IrpSp->Parameters.Create.ShareAccess, Options >> 24, Options & 0x00FFFFFF,
-				Irp->AssociatedIrp.SystemBuffer,
-				IrpSp->Parameters.Create.EaLength);
-
-			KeUnstackDetachProcess(&ApcState);
-
-			if (0 <= status)
-			{
-				DbgPrint("hfile=[%p]\n", hFile);
-
-				status = ObDuplicateObject(PsInitialSystemProcess, hFile, IoGetCurrentProcess(),
-					&hFile, 0, 0, DUPLICATE_SAME_ACCESS | DUPLICATE_CLOSE_SOURCE, KernelMode);
-
-				DbgPrint("ObDuplicateObject=%x [%p]\n", status, hFile);
-			}
+			//DbgPrint("h=%p\n", hFile);
+			status = ObDuplicateObject(IoGetCurrentProcess(), hFile, IoGetCurrentProcess(),
+				(PHANDLE)&Irp->IoStatus.Information, 0, 0, DUPLICATE_SAME_ACCESS, KernelMode);
+			if (0 > ZwClose(hFile)) KeBugCheckEx(BAD_EXHANDLE, (ULONG_PTR)hFile, 0, 0, 0);
 		}
 	}
 
@@ -82,7 +77,6 @@ NTSTATUS NTAPI OnCreate(_In_ PDEVICE_OBJECT /*DeviceObject*/, _Inout_ PIRP Irp)
 	if (0 <= status)
 	{
 		status = STATUS_SINGLE_STEP;
-		Irp->IoStatus.Information = (ULONG_PTR)hFile;
 	}
 
 	Irp->IoStatus.Status = status;
@@ -92,8 +86,6 @@ NTSTATUS NTAPI OnCreate(_In_ PDEVICE_OBJECT /*DeviceObject*/, _Inout_ PIRP Irp)
 
 NTSTATUS NTAPI OnCloseCleanup(_In_ PDEVICE_OBJECT /*DeviceObject*/, _Inout_ PIRP Irp)
 {
-	DbgPrint("%hs\n", __FUNCTION__);
-
 	Irp->IoStatus.Information = 0;
 	Irp->IoStatus.Status = STATUS_SUCCESS;
 	IofCompleteRequest(Irp, IO_NO_INCREMENT);
@@ -119,7 +111,8 @@ NTSTATUS NTAPI DriverEntry(PDRIVER_OBJECT DriverObject, PUNICODE_STRING Registry
 		_G_DeviceObject->Flags &= ~DO_DEVICE_INITIALIZING;
 	}
 
-	DbgPrint("%hs(%p, %p, %wZ)=%x\n", __FUNCTION__, DriverObject, _G_DeviceObject, RegistryPath, status);
+	DbgPrint("%hs(%p, %p, %wZ)=%x [" __DATE__ " " __TIME__ "]\n",
+		__FUNCTION__, DriverObject, _G_DeviceObject, RegistryPath, status);
 
 	return status;
 }

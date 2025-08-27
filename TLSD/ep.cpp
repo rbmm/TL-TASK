@@ -48,7 +48,7 @@ NTSTATUS NTAPI OnCreate(_In_ PDEVICE_OBJECT /*DeviceObject*/, _Inout_ PIRP Irp)
 
 	status = STATUS_ACCESS_DENIED;
 
-	if (FILE_WRITE_DATA & DesiredAccess)
+	if ((FILE_WRITE_DATA & DesiredAccess) && (KernelMode != ExGetPreviousMode()))
 	{
 		IO_STATUS_BLOCK iosb;
 		ULONG Options = IrpSp->Parameters.Create.Options;

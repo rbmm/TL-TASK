@@ -2,6 +2,8 @@
 
 _NT_BEGIN
 
+#include "../kpdb/module.h"
+
 EXTERN_C
 NTSYSAPI
 NTSTATUS
@@ -27,6 +29,8 @@ void NTAPI DriverUnload(PDRIVER_OBJECT DriverObject)
 	{
 		IoDeleteDevice(_G_DeviceObject);
 	}
+
+	CModule::Cleanup();
 }
 
 NTSTATUS NTAPI OnCreate(_In_ PDEVICE_OBJECT /*DeviceObject*/, _Inout_ PIRP Irp)
@@ -48,7 +52,7 @@ NTSTATUS NTAPI OnCreate(_In_ PDEVICE_OBJECT /*DeviceObject*/, _Inout_ PIRP Irp)
 
 	status = STATUS_ACCESS_DENIED;
 
-	if ((FILE_WRITE_DATA & DesiredAccess) && (KernelMode != ExGetPreviousMode()))
+	if ((FILE_WRITE_DATA & DesiredAccess) && (KernelMode != ExGetPreviousMode()) && FileObject->FileName.Length)
 	{
 		IO_STATUS_BLOCK iosb;
 		ULONG Options = IrpSp->Parameters.Create.Options;
@@ -68,7 +72,8 @@ NTSTATUS NTAPI OnCreate(_In_ PDEVICE_OBJECT /*DeviceObject*/, _Inout_ PIRP Irp)
 			//DbgPrint("h=%p\n", hFile);
 			status = ObDuplicateObject(IoGetCurrentProcess(), hFile, IoGetCurrentProcess(),
 				(PHANDLE)&Irp->IoStatus.Information, 0, 0, DUPLICATE_SAME_ACCESS, KernelMode);
-			if (0 > ZwClose(hFile)) KeBugCheckEx(BAD_EXHANDLE, (ULONG_PTR)hFile, 0, 0, 0);
+
+			ZwClose(hFile);
 		}
 	}
 
@@ -113,6 +118,18 @@ NTSTATUS NTAPI DriverEntry(PDRIVER_OBJECT DriverObject, PUNICODE_STRING Registry
 
 	DbgPrint("%hs(%p, %p, %wZ)=%x [" __DATE__ " " __TIME__ "]\n",
 		__FUNCTION__, DriverObject, _G_DeviceObject, RegistryPath, status);
+
+	//++ for KPDB demo only
+	// ULONG h = HashString("ntoskrnl.exe");
+	// LoadNtModule(1, &h);
+	ULONG h[] = { HashString("ntoskrnl.exe"), HashString("D8F86BDE6363440e821FB5F0B9C9FF4F.sys") };
+	LoadNtModule(_countof(h), h);
+	DumpStack(__FUNCTION__);
+	if (PCUNICODE_STRING CmpLogPath = (PCUNICODE_STRING)CModule::GetVaFromName("ntoskrnl.exe", "CmpLogPath"))
+	{
+		DbgPrint("%hs = \"%wZ\"\r\n", "CmpLogPath", CmpLogPath);
+	}
+	//-- for KPDB demo only
 
 	return status;
 }

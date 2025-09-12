@@ -27,6 +27,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RbmmCopy", "RbmmCopy\RbmmCo
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kpdb", "kpdb\kpdb.vcxproj", "{7862A871-E1D0-D97B-67B1-2EDA057B83A8}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "updb", "updb\updb.vcxproj", "{F5E49F8E-C256-2CF5-302E-7EECA88930F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Release|ARM64 = Release|ARM64
@@ -106,12 +108,18 @@ Global
 		{7862A871-E1D0-D97B-67B1-2EDA057B83A8}.Release|x64.Build.0 = Release|x64
 		{7862A871-E1D0-D97B-67B1-2EDA057B83A8}.Release|x86.ActiveCfg = Release|Win32
 		{7862A871-E1D0-D97B-67B1-2EDA057B83A8}.Release|x86.Build.0 = Release|Win32
+		{F5E49F8E-C256-2CF5-302E-7EECA88930F0}.Release|ARM64.ActiveCfg = Release|x64
+		{F5E49F8E-C256-2CF5-302E-7EECA88930F0}.Release|ARM64.Build.0 = Release|x64
+		{F5E49F8E-C256-2CF5-302E-7EECA88930F0}.Release|x64.ActiveCfg = Release|x64
+		{F5E49F8E-C256-2CF5-302E-7EECA88930F0}.Release|x64.Build.0 = Release|x64
+		{F5E49F8E-C256-2CF5-302E-7EECA88930F0}.Release|x86.ActiveCfg = Release|Win32
+		{F5E49F8E-C256-2CF5-302E-7EECA88930F0}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		    SolutionGuid = {F5F8EFE2-9EA8-4120-B5E8-024FE848034C}
 		SolutionGuid = {94E8AC8B-61FB-4D57-B3C4-53649811CB22}
+		    SolutionGuid = {F5F8EFE2-9EA8-4120-B5E8-024FE848034C}
 	EndGlobalSection
 EndGlobal

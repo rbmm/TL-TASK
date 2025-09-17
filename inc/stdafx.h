@@ -41,28 +41,38 @@ _NT_END
 #include <string.h>
 
 
-#define RtlInitializeCorrelationVector _RtlInitializeCorrelationVector_
-#define RtlIncrementCorrelationVector _RtlIncrementCorrelationVector_
-#define RtlExtendCorrelationVector _RtlExtendCorrelationVector_
-#define RtlValidateCorrelationVector _RtlValidateCorrelationVector_
-#define RtlRaiseCustomSystemEventTrigger _RtlRaiseCustomSystemEventTrigger_
-#define RtlCaptureContext _RtlCaptureContext_
-#define RtlGetNonVolatileToken _RtlGetNonVolatileToken_
-#define RtlFreeNonVolatileToken _RtlFreeNonVolatileToken_
-#define RtlFlushNonVolatileMemory _RtlFlushNonVolatileMemory_
-#define RtlDrainNonVolatileFlush _RtlDrainNonVolatileFlush_
-#define RtlWriteNonVolatileMemory _RtlWriteNonVolatileMemory_
-#define RtlFillNonVolatileMemory _RtlFillNonVolatileMemory_
-#define RtlFlushNonVolatileMemoryRanges _RtlFlushNonVolatileMemoryRanges_
-#define RtlCaptureContext2 _RtlCaptureContext2_
-#define RtlGetSystemGlobalData _RtlGetSystemGlobalData_
-#define RtlSetSystemGlobalData _RtlSetSystemGlobalData_
+#ifndef _CRT_CONCATENATE
+#define _CRT_CONCATENATE_(a, b) a ## b
+#define _CRT_CONCATENATE(a, b)  _CRT_CONCATENATE_(a, b)
+#endif
+
+#define RANDOM_NAME _CRT_CONCATENATE(_, __COUNTER__)
+
+#define RtlOsDeploymentState				RANDOM_NAME
+#define RtlInitializeCorrelationVector		RANDOM_NAME
+#define RtlIncrementCorrelationVector		RANDOM_NAME
+#define RtlExtendCorrelationVector			RANDOM_NAME
+#define RtlValidateCorrelationVector		RANDOM_NAME
+#define RtlRaiseCustomSystemEventTrigger	RANDOM_NAME
+#define RtlCaptureContext					RANDOM_NAME
+#define RtlGetNonVolatileToken				RANDOM_NAME
+#define RtlFreeNonVolatileToken				RANDOM_NAME
+#define RtlFlushNonVolatileMemory			RANDOM_NAME
+#define RtlDrainNonVolatileFlush			RANDOM_NAME
+#define RtlWriteNonVolatileMemory			RANDOM_NAME
+#define RtlFillNonVolatileMemory			RANDOM_NAME
+#define RtlFlushNonVolatileMemoryRanges		RANDOM_NAME
+#define RtlCaptureContext2					RANDOM_NAME
+#define RtlGetSystemGlobalData				RANDOM_NAME
+#define RtlSetSystemGlobalData				RANDOM_NAME
+#define CUSTOM_SYSTEM_EVENT_TRIGGER_INIT	RANDOM_NAME
 
 #define _INC_MMSYSTEM  /* Prevent inclusion of mmsystem.h in windows.h */
 
 #include <WinSock2.h>
 #include <intrin.h>
 
+#undef RtlOsDeploymentState
 #undef RtlInitializeCorrelationVector
 #undef RtlIncrementCorrelationVector
 #undef RtlExtendCorrelationVector
@@ -79,6 +89,7 @@ _NT_END
 #undef RtlCaptureContext2
 #undef RtlGetSystemGlobalData
 #undef RtlSetSystemGlobalData
+#undef CUSTOM_SYSTEM_EVENT_TRIGGER_INIT
 
 #ifdef SECURITY_WIN32
 #define InitSecurityInterfaceW _InitSecurityInterfaceW_
@@ -89,8 +100,6 @@ _NT_END
 #undef _INC_MMSYSTEM
 
 _NT_BEGIN
-
-#define RtlCompareMemory ::RtlCompareMemory
 
 #ifdef _RTL_RUN_ONCE_DEF
 #undef _RTL_RUN_ONCE_DEF
@@ -159,13 +168,7 @@ EXTERN_C_END
 
 #endif//NOWINBASEINTERLOCK
 
-#define RtlOsDeploymentState _RtlOsDeploymentState_
-#define CUSTOM_SYSTEM_EVENT_TRIGGER_INIT _CUSTOM_SYSTEM_EVENT_TRIGGER_INIT_
-
 #include <ntifs.h>
-
-#undef RtlOsDeploymentState
-#undef CUSTOM_SYSTEM_EVENT_TRIGGER_INIT
 
 #include "ntpebteb.h"
 #include "sysinfo.h"

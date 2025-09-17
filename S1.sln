@@ -29,6 +29,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kpdb", "kpdb\kpdb.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "updb", "updb\updb.vcxproj", "{F5E49F8E-C256-2CF5-302E-7EECA88930F0}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "inspect", "inspect\inspect.vcxproj", "{558BA5EE-CCBE-0F79-1DF1-3BD9CEE21B76}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Release|ARM64 = Release|ARM64
@@ -114,12 +116,18 @@ Global
 		{F5E49F8E-C256-2CF5-302E-7EECA88930F0}.Release|x64.Build.0 = Release|x64
 		{F5E49F8E-C256-2CF5-302E-7EECA88930F0}.Release|x86.ActiveCfg = Release|Win32
 		{F5E49F8E-C256-2CF5-302E-7EECA88930F0}.Release|x86.Build.0 = Release|Win32
+		{558BA5EE-CCBE-0F79-1DF1-3BD9CEE21B76}.Release|ARM64.ActiveCfg = Release|x64
+		{558BA5EE-CCBE-0F79-1DF1-3BD9CEE21B76}.Release|ARM64.Build.0 = Release|x64
+		{558BA5EE-CCBE-0F79-1DF1-3BD9CEE21B76}.Release|x64.ActiveCfg = Release|x64
+		{558BA5EE-CCBE-0F79-1DF1-3BD9CEE21B76}.Release|x64.Build.0 = Release|x64
+		{558BA5EE-CCBE-0F79-1DF1-3BD9CEE21B76}.Release|x86.ActiveCfg = Release|Win32
+		{558BA5EE-CCBE-0F79-1DF1-3BD9CEE21B76}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {94E8AC8B-61FB-4D57-B3C4-53649811CB22}
 		    SolutionGuid = {F5F8EFE2-9EA8-4120-B5E8-024FE848034C}
+		SolutionGuid = {94E8AC8B-61FB-4D57-B3C4-53649811CB22}
 	EndGlobalSection
 EndGlobal

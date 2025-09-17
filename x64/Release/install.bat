@@ -1,0 +1,1 @@
+sc create TIS00 binpath= "%~dp0\inspect.dll" type= kernel start= demand error= normal
